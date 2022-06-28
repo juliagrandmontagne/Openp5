@@ -1,0 +1,427 @@
+@font-face {
+  font-family: "Merienda-Regular";
+  src: url('Typo/Merienda-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family:"Quintessential-Regular";
+  src: url('Typo/Quintessential-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family:"Arial";
+  src: url('Typo/Nimbus-Sans-D-OT-Light_32752.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: "caroline";
+  src: url('Typo/caroline.otf');
+  font-weight: 400;
+  }
+  @font-face {
+  font-family: "Saudagar";
+  src: url('Typo/Saudagar.ttf');
+  font-weight: 400;
+  }
+html, body 
+{
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%; 
+}
+/*MENU NAVIGUATION PRINCIPAL */
+header ul 
+{
+list-style-type: none;
+display: flex;
+width: 100%;
+}
+header a 
+  {
+font-family: Quintessential-Regular;
+font-size: 1.3em;
+color: black;
+text-decoration: none;
+margin-top: 50px;
+display: block;
+}
+li
+{
+  margin: auto;
+}
+.fas.fa-leaf 
+{
+  color: green;
+margin-top: 50px;
+}
+.feuille 
+{
+  margin-right: 290px;
+  margin-top: 10px;
+}
+img#logo 
+{
+  width: 50px;
+  margin-top: -0px;
+  display: block;
+  position: absolute;
+}
+/*menuconnexion*/
+li.menuconnexion {
+  margin: 10px;
+}
+ul.laconnexion {
+  float: left;
+  display: flex;
+  position: relative;
+}
+a.boutonconnexion {
+  /* border: 1px black; */
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 0px;
+}
+/*slider*/
+#slider {
+  display: flex;
+  width: 100%;
+  margin-top: 80px;
+}
+.speetch {
+  display: block;
+  margin-top: -300px;
+  color: #ffffff;
+  margin-left: 10%;
+  background-color: rgba(0, 0, 5, 0.5);
+  height: 100px;
+  font-family: "Merienda-Regular";
+}
+/*pagesrecettes*/
+.recette1 {
+  height: auto;
+  display: grid;
+  justify-content: center;
+  margin: auto;
+
+}
+/*menu trie alcool*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+
+.sidebar {
+  position: fixed;
+  width: 10%;
+  height: 100vh;
+  font-size: 0.65em;
+}
+
+.nav {
+  position: relative;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  flex-direction: column;
+  }
+  .nav li {
+    position: relative;
+    margin: 0px;
+}
+   .nav a {
+      line-height: 5em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color: black;
+      display: block;
+}
+  .nav a {
+    position: relative;
+      }
+      #none {
+        display: none;
+    }
+/*page recettes par niveau*/
+    img.illustrationCoktail {
+      display: flex;
+      width: 80px;
+  }
+  .espacerecettes {
+    display: block;
+    height: 480px;
+    width: 300px;
+    margin: 10px;
+    padding: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    margin-top: 90px;
+    overflow: scroll;
+    border-radius: 30px;
+    border-top-color: white;
+    margin-left: 25%;
+}
+.titrecocktail {
+  font-family: "Merienda-Regular";
+  margin-top: -40px;
+  z-index: 1000;
+  display: block;
+  position: absolute;
+  width: 300px;
+  align-content: center;
+}
+.suitelien {
+  text-align: center;
+  display: block;
+  margin:auto;
+  font-family: "Saudagar";
+  text-decoration: none;
+  color: white;
+  background-color:green;
+  width:80px;
+  border-radius:10px;
+  padding:5px;
+}
+.recette {
+  font-family: arial;
+}
+section#page {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+/*connection utilisateur*/
+#connexionutilisateur {
+  display: grid;
+  margin: auto;
+  width: 300px;
+}
+button.btn-submit {
+  background-color: green;
+  border-radius: 30px;
+  color: white;
+  border-color:green ;
+  width: 300px;
+}
+input.nameuser {
+  margin-bottom: 40px;
+  border-radius: 30px;
+}
+input 
+{
+  margin-bottom: 40px;
+  border-radius: 30px;
+  width: 300px;
+}
+#motdepasse 
+{
+  margin-bottom: 40px;
+  border-radius: 30px;
+
+}
+
+p.titreconnection {
+    display: grid;
+    align-content: center;
+    font-family: Quintessential-Regular;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+.carré {
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+  width: 500px;
+  padding: 30px;
+  display: block;
+  margin: auto;
+
+}
+/*Page uitisateur*/
+.fa-solid.fa-plus {
+  width: 100px;
+  height: 30px;
+  background-color: green;
+  border-radius: 30px;
+}
+.ajout {
+  display: grid;
+  justify-content: center;
+}
+.carrégestionrecette {
+  width: 800px;
+  height: 800PX;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 40px;
+  overflow: scroll;
+}
+.liste {
+  border-bottom: 1px solid #c0bbbb;
+  /* border-width: 1px; */
+  /* border-style: solid; */
+  margin-left: 20px;
+  margin-right: 20PX;
+}
+/*administratif*/
+.gestionadministratifrecette {
+  width: 45%;
+  height: 800PX;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 40px;
+  overflow: scroll;
+}
+.gestionadministratifuilisateur {
+  width: 45%;
+  height: 800PX;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 40px;
+  overflow: scroll;
+}
+section#admin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  margin-left: auto;
+}
+
+.recette1 {
+    width: 75%;
+    height: auto;
+    /* background-color: beige; */
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px;
+}
+.bouttonretour {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  margin-top: 40px;
+  margin-left: 40px;
+  border-radius: 30PX;
+}
+/*editionrecette*/
+.recetteprevous {
+  width: 75%;
+  height: 700px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+}
+.edition {
+  width: 20%;
+  height: 700px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+}
+section#editionrecette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  margin-left: auto;
+}
+/**/
+#creationrecette {
+  margin-top: 50px;
+}
+#titrerecette {
+  width: 90%;
+}
+.titrerecette {
+  display: grid;
+  justify-items: center;
+  font-family: Quintessential-Regular;
+}
+label {
+  display: grid;
+  justify-items: center;
+  font-family: Quintessential-Regular;
+}
+textarea {
+  width: 90%;
+  display: grid;
+  align-items: center;
+}
+#Difficulte {
+  margin: 0px;
+}
+#site-search {
+  margin-top: 30px;
+  display: block;
+  width: 75%;
+  margin-left: 20px;
+}
+/*footer*/
+
+footer {
+  display: grid;
+  margin-top: 80px;
+  bottom: 0px;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  margin-top: 90px;
+  border-bottom-color: white;
+  border-left-color: white;
+  border-right-color:white;
+}
+.piedpage {
+  display: grid;
+ align-self: center;
+  color: black;
+  text-decoration: none;
+
+}
+#baspage {
+  display: block;
+  align-items: center;
+  margin: auto;
+}
+.contact {
+  width: 80%;
+  height: 300px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+  display: block;
+  margin: auto;
+}
+.contactecris {
+  text-align: center;
+  font-size: 30px;
+  font-family: Merienda-Regular;
+  margin-top: 100px;
+}
