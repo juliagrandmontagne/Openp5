@@ -5,16 +5,16 @@ if (isset($_GET['action']))
 {
       switch ($_GET['action'])
         {
-            case 'accueil':
+            case'accueil':
             accueil();
             break;
-             case'debutant':
-             debutant();
-             break;
-              case'intermediaire':
-              intermediaire();
-             break;
-              case'confirmer':
+            case'debutant':
+            debutant();
+            break;
+            case'intermediaire':
+            intermediaire();
+            break;
+            case'confirmer':
             confirmer();
             break;
             case'inscription':
@@ -43,8 +43,5 @@ if (isset($_GET['action']))
             break;
         }
 }
-else
-{
-accueil();
-}
+
 ?>

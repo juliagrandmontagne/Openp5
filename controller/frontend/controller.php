@@ -20,9 +20,9 @@ function intermediaire()
 }
     function confirmer()
     { 
-    require('Model/frontend/recette.php');
-    $instanceclasserecetteconf = new modelrecette();
-    $datarecetteconf = $instanceclasserecetteconf-> connexionbdrecetted3();
+    //require('Model/frontend/recette.php');
+   // $instanceclasserecetteconf = new modelrecette();
+   // $datarecetteconf = $instanceclasserecetteconf-> connexionbdrecetted3();
     require('view/frontend/recettedifficulter3.php');
     }
     function inscription()
@@ -53,22 +53,18 @@ function intermediaire()
     { 
     require('view/frontend/contact.php');
     }
-    
-    function creeutilisateur()
-    { 
-   // require('view/frontend/inscription.php')
-    //$instanceclasseutilisateur = new modelcreerutilisateur();
-    //$databdseconnecter = $instanceclasseutilisateur->creeutilisateur();
-    require('Model/backend/creationutilisateur.php');
-     }
-     //function connectionutilisateur()
-    //{ 
-    //    require('view/frontend/connexionutilisateur.php');
-        //$instanceseconnecter = new modelconnectionutilisateur();
-        //$databdseconnecterutilisateur = $instanceseconnecter->seconnecter();
-        //require('Model/frontend/connectionutilisateur.php');
-     //}
-
-     
-    
+//function creeutilisateur()
+//{ 
+//require('view/frontend/inscription.php')
+//$instanceclasseutilisateur = new modelcreerutilisateur();
+//$databdseconnecter = $instanceclasseutilisateur->creeutilisateur();
+//require('Model/backend/creationutilisateur.php');
+//}
+//function connectionutilisateur()
+//{ 
+//require('view/frontend/connexionutilisateur.php');
+//$instanceseconnecter = new modelconnectionutilisateur();
+//$databdseconnecterutilisateur = $instanceseconnecter->seconnecter();
+//require('Model/frontend/connectionutilisateur.php');
+//}
 ?>
