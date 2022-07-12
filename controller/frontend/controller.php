@@ -53,18 +53,18 @@ function intermediaire()
     { 
     require('view/frontend/contact.php');
     }
-//function creeutilisateur()
-//{ 
-//require('view/frontend/inscription.php')
-//$instanceclasseutilisateur = new modelcreerutilisateur();
-//$databdseconnecter = $instanceclasseutilisateur->creeutilisateur();
-//require('Model/backend/creationutilisateur.php');
-//}
-//function connectionutilisateur()
-//{ 
-//require('view/frontend/connexionutilisateur.php');
-//$instanceseconnecter = new modelconnectionutilisateur();
-//$databdseconnecterutilisateur = $instanceseconnecter->seconnecter();
-//require('Model/frontend/connectionutilisateur.php');
-//}
+    function creeutilisateur()
+    { 
+     require('Model/backend/creationutilisateur.php'); 
+    $instanceclasseutilisateur = new modelcreerutilisateur();
+    $databdseconnecter = $instanceclasseutilisateur->creeutilisateur();
+   require('view/frontend/inscription.php');
+    }
+    function connectionutilisateur()
+    { 
+    require('Model/frontend/connectionutilisateur.php'); 
+    $instanceseconnecter = new modelconnectionutilisateur();
+    $databdseconnecterutilisateur = $instanceseconnecter->seconnecter();
+    require('view/frontend/connexionutilisateur.php');
+    }
 ?>

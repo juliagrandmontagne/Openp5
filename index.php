@@ -21,7 +21,7 @@ if (isset($_GET['action']))
             inscription();
             break;
             case'connexionutilisateur':
-            connexionutilisateur();
+            connectionutilisateur();
             break;
             case'utilisateur':
             utilisateur();
