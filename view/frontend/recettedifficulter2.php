@@ -1,5 +1,4 @@
 <?php $title = 'Accueil' ; ?>
-<?php ob_start() ; ?>
 <div id="trieoh">
 <aside class="sidebar">
     <nav class="nav" >
@@ -15,6 +14,8 @@
     </nav>
   </aside>
 </div>  
+<?php ob_start() ; ?>
+
 <section id="page">
 <?php  foreach ($datarecetteint as $donnees) : ?>   
     <section id="page"> 

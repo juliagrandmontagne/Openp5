@@ -1,5 +1,4 @@
 <?php $title = 'recette' ; ?>
-<?php ob_start() ; ?>
 <div id="trieoh">
   <aside class="sidebar">
     <nav class="nav" >
@@ -15,18 +14,21 @@
     </nav>
   </aside>
 </div> 
-<?php  foreach ($datarecettedeb as $donnees) : ?>   
+<?php ob_start() ; ?>
+
+
     <section id="page"> 
-    <div class="espacerecettes">
+    <?php  foreach ($datarecettedeb as $donnees) : ?>   
+    <article class="espacerecettes">
     <div class='titrecocktail'> 
     <?php echo $donnees['nomrecette']?> 
- </div>
+
     <div class="recette"><?php echo $donnees['Recette']?> <br>
     <img src="<?php echo $donnees['image']?>" alt="illustrationCoktail" class="illustrationCoktail"> </div>
-    <div class="suite"><a class="suitelien" href="#">lire la suite</a></div>  
- 
+    <div class="suite"><a class="suitelien" href="#">lire la suite</a></div>   </article>
+  <?php endforeach; ?>
     
     </section>
-   <?php endforeach; ?>
+  
 <?php $content = ob_get_clean() ; ?>
 <?php require('template.php'); ?>

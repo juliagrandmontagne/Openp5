@@ -1,6 +1,4 @@
-<?php $title = 'Accueil' ; ?>
-<?php ob_start() ; ?>
-<div id="trieoh">
+<?php $title = 'Accueil' ; ?><div id="trieoh">
 <aside class="sidebar">
     <nav class="nav" >
       <ul>
@@ -15,6 +13,8 @@
     </nav>
   </aside>
 </div>  
+<?php ob_start() ; ?>
+
 <?php  foreach ($datarecetteconf as $donnees) : ?>   
     <section id="page"> 
     <div class="espacerecettes">

@@ -33,6 +33,7 @@ height: 100%;
 div#contenaire {
   max-width: 1300px;
   margin: auto;
+  margin-left: 25%;
 }
 /*MENU NAVIGUATION PRINCIPAL */
 header ul 
@@ -170,7 +171,7 @@ a.boutonconnexion {
     overflow: scroll;
     border-radius: 30px;
     border-top-color: white;
-    margin-left: 25%;
+
 }
 .titrecocktail {
   font-family: "Merienda-Regular";

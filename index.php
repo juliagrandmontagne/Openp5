@@ -23,6 +23,7 @@ if (isset($_GET['action']))
             case'connexionutilisateur':
             connectionutilisateur();
             break;
+
             case'utilisateur':
             utilisateur();
             break;
@@ -41,6 +42,10 @@ if (isset($_GET['action']))
             case'creerutilisateur';
             creeutilisateur();
             break;
+            
+            case'connectetoi';
+            seconnecter();
+          break;
         }
 }
 

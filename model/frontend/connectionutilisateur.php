@@ -4,19 +4,30 @@ class modelconnectionutilisateur
     public function seconnecter()  
     {
       require('connexion.php');
-      $search='SELECT * FROM recettes WHERE IDUtilisateur=' . $_GET["id"];
-      $reponse = $bdd->prepare($search);
-      $reponse->execute();
-              $data = $reponse->fetchAll();
-              return $data;
-              $rereponseq->cloreCursor();
+      $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE PseudoUtilisateur = ?,	MpUtilisateur = ?');
+      $namesaisie = htmlspecialchars(['login']);
+      $mpsaisie = htmlspecialchars(['mp']);  
+      $reponse->execute( array($namesaisie ,$mpsaisie ));
+      $userexist = $reponse->rowcount();
+      if($userexist= 1, ,) 
+      {
+        session_start (); 
+        header('Location:index.php?action=utilisateur')
+      }
+      else{ echo"vous n'existez pas ";} 
+     $data = $reponse->fetchAll();
+     return $data;
+      $rereponseq->cloreCursor();
     }
+
+   
+
     public function connexionutilisateur()  
     {
       require('connexion.php');
    // header('Location:index.php?action=utilisateur');
-
     }
+
     public function connexionadministrateur()  
     {
       require('connexion.php');
