@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : mar. 14 juin 2022 à 12:50
+-- Généré le : Dim 17 juil. 2022 à 16:31
 -- Version du serveur :  5.7.32
 -- Version de PHP : 7.4.12
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `recette` (
   `ID` int(255) NOT NULL,
   `Ingredients` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `NomRecette` text NOT NULL,
+  `nomrecette` text NOT NULL,
   `Recette` text NOT NULL,
   `IDUtilisateur` int(255) NOT NULL,
   `Image` int(50) NOT NULL,
@@ -40,8 +40,12 @@ CREATE TABLE `recette` (
 -- Déchargement des données de la table `recette`
 --
 
-INSERT INTO `recette` (`ID`, `Ingredients`, `NomRecette`, `Recette`, `IDUtilisateur`, `Image`, `difficulte`) VALUES
-(1, '4 cl de rhum blanc\r\n6 feuilles de menthe\r\n1 eau gazeuse\r\n2 cl de sirop de sucre de canne\r\n½ citron vert\r\n10 glaçons', 'Mojito', 'Coupez le citron en deux puis chaque demi citron en 6 morceaux.\r\nAjoutez le sirop de sucre de canne. Le fait d\'utiliser un sucre liquide permet de ne pas sentir les cristaux du sucre à la dégustation du cocktail.Ajoutez la glace.Ajoutez le rhum.Complétez avec l\'eau gazeuse.Mélangez le cocktail afin que les saveur se mêlent.', 1, 0, 1);
+INSERT INTO `recette` (`ID`, `Ingredients`, `nomrecette`, `Recette`, `IDUtilisateur`, `Image`, `difficulte`) VALUES
+(1, '4 cl de rhum blanc\r\n6 feuilles de menthe\r\n1 eau gazeuse\r\n2 cl de sirop de sucre de canne\r\n½ citron vert\r\n10 glaçons', 'Mojito', 'Coupez le citron en deux puis chaque demi citron en 6 morceaux.\r\nAjoutez le sirop de sucre de canne. Le fait d\'utiliser un sucre liquide permet de ne pas sentir les cristaux du sucre à la dégustation du cocktail.Ajoutez la glace.Ajoutez le rhum.Complétez avec l\'eau gazeuse.Mélangez le cocktail afin que les saveur se mêlent.', 1, 0, 1),
+(3, '4 cl de rhum blanc\r\n6 feuilles de menthe\r\n1 eau gazeuse\r\n2 cl de sirop de sucre de canne\r\n½ citron vert\r\n10 glaçons', 'Mojito', 'Coupez le citron en deux puis chaque demi citron en 6 morceaux.\r\nAjoutez le sirop de sucre de canne. Le fait d\'utiliser un sucre liquide permet de ne pas sentir les cristaux du sucre à la dégustation du cocktail.Ajoutez la glace.Ajoutez le rhum.Complétez avec l\'eau gazeuse.Mélangez le cocktail afin que les saveur se mêlent.', 1, 0, 1),
+(4, '4 cl de rhum blanc\r\n6 feuilles de menthe\r\n1 eau gazeuse\r\n2 cl de sirop de sucre de canne\r\n½ citron vert\r\n10 glaçons', 'Mojito', 'Coupez le citron en deux puis chaque demi citron en 6 morceaux.\r\nAjoutez le sirop de sucre de canne. Le fait d\'utiliser un sucre liquide permet de ne pas sentir les cristaux du sucre à la dégustation du cocktail.Ajoutez la glace.Ajoutez le rhum.Complétez avec l\'eau gazeuse.Mélangez le cocktail afin que les saveur se mêlent.', 1, 0, 1),
+(5, '4 cl de rhum blanc\r\n6 feuilles de menthe\r\n1 eau gazeuse\r\n2 cl de sirop de sucre de canne\r\n½ citron vert\r\n10 glaçons', 'Mojito', 'Coupez le citron en deux puis chaque demi citron en 6 morceaux.\r\nAjoutez le sirop de sucre de canne. Le fait d\'utiliser un sucre liquide permet de ne pas sentir les cristaux du sucre à la dégustation du cocktail.Ajoutez la glace.Ajoutez le rhum.Complétez avec l\'eau gazeuse.Mélangez le cocktail afin que les saveur se mêlent.', 1, 0, 1),
+(6, '4 cl de rhum blanc\r\n6 feuilles de menthe\r\n1 eau gazeuse\r\n2 cl de sirop de sucre de canne\r\n½ citron vert\r\n10 glaçons', 'Mojito', 'Coupez le citron en deux puis chaque demi citron en 6 morceaux.\r\nAjoutez le sirop de sucre de canne. Le fait d\'utiliser un sucre liquide permet de ne pas sentir les cristaux du sucre à la dégustation du cocktail.Ajoutez la glace.Ajoutez le rhum.Complétez avec l\'eau gazeuse.Mélangez le cocktail afin que les saveur se mêlent.', 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -53,8 +57,16 @@ CREATE TABLE `utilisateur` (
   `PseudoUtilisateur` text NOT NULL,
   `MailUtilisateur` text NOT NULL,
   `IDRecette` int(255) NOT NULL,
-  `MpUtilisateur` text NOT NULL
+  `MpUtilisateur` text NOT NULL,
+  `administrateur` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`PseudoUtilisateur`, `MailUtilisateur`, `IDRecette`, `MpUtilisateur`, `administrateur`) VALUES
+('utilisateur', 'mail@mail.com', 1, 'mp', 0);
 
 --
 -- Index pour les tables déchargées
@@ -80,7 +92,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `recette`
 --
 ALTER TABLE `recette`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
