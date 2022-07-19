@@ -202,6 +202,11 @@ section#page {
   flex-wrap: wrap;
 
 }
+section#pages {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 25%;
+}
 /*connection utilisateur*/
 #connexionutilisateur {
   display: grid;
