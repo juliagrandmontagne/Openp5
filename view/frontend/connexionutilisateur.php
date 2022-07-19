@@ -3,7 +3,7 @@
 <section id="main">
      <div class="carré">
         <p class="titreconnection">Bonjour, vous souhaitez vous connecter pour gerez vos recette ?</p>
-            <form action="index.php?action=" method="post" id="connexionutilisateur" >     
+            <form action="index.php?action=utilisateur" method="post" id="connexionutilisateur" >     
                 <div id="formulairedeconnection"></div>
                     <input class="nameuser" name="nameuser" placeholder="pseudo">
                     <input id="motdepasse" type="pasword" name="mp" placeholder="mot de passe">

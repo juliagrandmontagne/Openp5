@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
   font-family: "Merienda-Regular";
   src: url('Typo/Merienda-Regular.ttf');
   font-weight: 400;
@@ -33,7 +33,7 @@ height: 100%;
 div#contenaire {
   max-width: 1300px;
   margin: auto;
-  margin-left: 25%;
+
 }
 /*MENU NAVIGUATION PRINCIPAL */
 header ul 

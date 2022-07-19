@@ -29,13 +29,15 @@ function intermediaire()
     { 
     require('view/frontend/inscription.php');
     }
-    function connexionutilisateur()
-    { 
-    require('view/frontend/connexionutilisateur.php');
-    }
+   // function connexionutilisateur()
+   /// { 
+    //require('view/frontend/connexionutilisateur.php');
+    //}
     function utilisateur()
     { 
     require('view/frontend/gestionutilisateur.php');
+    $instanceclassedeutilisateur = new modelcreerutilisateur();
+    $databdsutilisateur = $instanceclassedeutilisateur->connexionutilisateur();
     }
     function administration()
     { 
