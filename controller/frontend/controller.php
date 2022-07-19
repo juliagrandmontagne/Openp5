@@ -13,20 +13,20 @@ require('view/frontend/recettedifficulter1.php');
 }
 function intermediaire()
 { 
-    require('Model/frontend/recette.php');
-    $instanceclasserecetteint = new modelrecette();
-    $datarecetteint = $instanceclasserecetteint-> connexionbdrecetted2();
-    require('view/frontend/recettedifficulter2.php');
+require('Model/frontend/recette.php');
+$instanceclasserecetteint = new modelrecette();
+$datarecetteint = $instanceclasserecetteint-> connexionbdrecetted2();
+require('view/frontend/recettedifficulter2.php');
 }
-    function confirmer()
-    { 
-    //require('Model/frontend/recette.php');
-   // $instanceclasserecetteconf = new modelrecette();
-   // $datarecetteconf = $instanceclasserecetteconf-> connexionbdrecetted3();
-    require('view/frontend/recettedifficulter3.php');
-    }
-    function inscription()
-    { 
+function confirmer()
+{ 
+require('Model/frontend/recette.php');
+$instanceclasserecetteconf = new modelrecette();
+$datarecetteconf = $instanceclasserecetteconf-> connexionbdrecetted3();
+require('view/frontend/recettedifficulter3.php');
+}
+function inscription()
+{ 
     require('view/frontend/inscription.php');
     }
    // function connexionutilisateur()
@@ -35,9 +35,8 @@ function intermediaire()
     //}
     function utilisateur()
     { 
-        require('Model/frontend/connectionutilisateur.php'); 
-  
-    $instanceclassedeutilisateur = new modelcreerutilisateur();
+    require('Model/frontend/connectionutilisateur.php'); 
+    $instanceclassedeutilisateur = new modelconnectionutilisateur();
     $databdsutilisateur = $instanceclassedeutilisateur->connexionutilisateur();
     require('view/frontend/connexionutilisateur.php');
     }
@@ -59,10 +58,10 @@ function intermediaire()
     }
     function creeutilisateur()
     { 
-     require('Model/backend/creationutilisateur.php'); 
+    require('Model/backend/creationutilisateur.php'); 
     $instanceclasseutilisateur = new modelcreerutilisateur();
     $databdseconnecter = $instanceclasseutilisateur->creeutilisateur();
-   require('view/frontend/inscription.php');
+    require('view/frontend/inscription.php');
     }
     function connectionutilisateur()
     { 

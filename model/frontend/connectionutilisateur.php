@@ -9,15 +9,15 @@ class modelconnectionutilisateur
     {
       require('connexion.php');
    $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE PseudoUtilisateur = ?,	MpUtilisateur = ?');
-   $namesaisie = htmlspecialchars(['login']);
-   $mpsaisie = htmlspecialchars(['mp']);  
+   $namesaisie = htmlspecialchars($_POST['nameuser']);
+   $mpsaisie = htmlspecialchars($_POST['mp']);  
    $reponse->execute( array($namesaisie ,$mpsaisie ));
    $userexist = $reponse->rowcount();
    if($userexist > 0) 
    {
-     header('Location:index.php?action=utilisateur');
+    header('Location:index.php?action=administration');
    }
-   else{ echo"vous n'existez pas ";} 
+   else{  echo"vous n'existez pas ";} 
   $data = $reponse->fetchAll();
   return $data;
    $rereponseq->cloreCursor();
