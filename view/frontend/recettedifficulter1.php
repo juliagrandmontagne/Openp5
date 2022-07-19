@@ -17,7 +17,7 @@
 <?php ob_start() ; ?>
 
 
-    <section id="page"> 
+    <section id="pages"> 
     <?php  foreach ($datarecettedeb as $donnees) : ?>   
     <article class="espacerecettes">
     <div class='titrecocktail'> 

@@ -16,7 +16,7 @@
 <?php ob_start() ; ?>
 
 <?php  foreach ($datarecetteconf as $donnees) : ?>   
-    <section id="page"> 
+    <section id="pages"> 
     <div class="espacerecettes">
     <div class='titrecocktail'> 
     <?php echo $donnees['nomrecette']?> 
