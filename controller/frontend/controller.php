@@ -1,73 +1,86 @@
 <?php
-
-function accueil()
+//IC= instance de classe
+//charge la page accueil
+function PageAccueil()
 { 
-require('view/frontend/accueil.php');
+require('view/frontend/Accueil.php');
 }
-function debutant()
+//charge la page recette debutant
+function PageRecetteDebutant()
 { 
-require('Model/frontend/recette.php');
-$instanceclasserecettedeb = new modelrecette();
-$datarecettedeb = $instanceclasserecettedeb->connexionbdrecetted1();
-require('view/frontend/recettedifficulter1.php');
+require('Model/frontend/Recette.php');
+$ICRecetteDebutant = new Recette();
+$DataRecetteDeb = $ICRecetteDebutant->RecupereRecetteDebutant();
+require('view/frontend/RecetteDifficulter1.php');
 }
-function intermediaire()
+//charge la page recette intermediaire
+function PageRecetteIntermediaire()
 { 
-require('Model/frontend/recette.php');
-$instanceclasserecetteint = new modelrecette();
-$datarecetteint = $instanceclasserecetteint-> connexionbdrecetted2();
-require('view/frontend/recettedifficulter2.php');
+require('Model/frontend/Recette.php');
+$ICRecetteIntermediaire = new Recette();
+$DataRecetteInt = $ICRecetteIntermediaire->RecupereRecetteIntermediaire();
+require('view/frontend/RecetteDifficulter2.php');
 }
-function confirmer()
+//charge la page recette confirmer
+function PageRecetteConfirmer()
 { 
-require('Model/frontend/recette.php');
-$instanceclasserecetteconf = new modelrecette();
-$datarecetteconf = $instanceclasserecetteconf-> connexionbdrecetted3();
-require('view/frontend/recettedifficulter3.php');
+require('Model/frontend/Recette.php');
+$ICRecetteConfirmer = new Recette();
+$DataRecetteConf = $ICRecetteConfirmer->RecupereRecetteConfirmer();
+require('view/frontend/RecetteDifficulter3.php');
 }
-function inscription()
+//charge la page inscription
+function PageInscription()
 { 
-    require('view/frontend/inscription.php');
-    }
-   // function connexionutilisateur()
-   /// { 
-    //require('view/frontend/connexionutilisateur.php');
-    //}
-    function utilisateur()
-    { 
-    require('Model/frontend/connectionutilisateur.php'); 
-    $instanceclassedeutilisateur = new modelconnectionutilisateur();
-    $databdsutilisateur = $instanceclassedeutilisateur->connexionutilisateur();
-    require('view/frontend/connexionutilisateur.php');
-    }
-    function administration()
-    { 
-    require('view/frontend/comptemoderateur.php');
-    }
-    function recette()
-    { 
-    require('view/frontend/pagerecette.php');
-    }
-    function edition()
-    { 
-    require('view/frontend/editionrecette.php');
-    }
-    function contact()
-    { 
-    require('view/frontend/contact.php');
-    }
-    function creeutilisateur()
-    { 
-    require('Model/backend/creationutilisateur.php'); 
-    $instanceclasseutilisateur = new modelcreerutilisateur();
-    $databdseconnecter = $instanceclasseutilisateur->creeutilisateur();
-    require('view/frontend/inscription.php');
-    }
-    function connectionutilisateur()
-    { 
-    require('Model/frontend/connectionutilisateur.php'); 
-    $instanceseconnecter = new modelconnectionutilisateur();
-    $databdseconnecterutilisateur = $instanceseconnecter->seconnecter();
-    require('view/frontend/connexionutilisateur.php');
-    }
+require('view/frontend/inscription.php');
+}
+//lance la page de connexion
+function PageLogin()
+{ 
+require('view/frontend/ConnexionUtilisateur.php');
+}
+//lance la page gestion utilisateur
+function ProfilUtilisateur()
+{ 
+require('Model/frontend/EspaceGestion.php'); 
+$ICUtilisateur = new EspaceGestion();
+$DataUtilisateur = $ICUtilisateur->ProfilUtilisateur();
+require('view/frontend/GestionUtilisateur.php');
+}
+//lance la page gestion administratif (moderateur)
+function ProfilAdministration()
+{ 
+require('view/frontend/CompteModerateur.php');
+}
+//charge la page du recette (sera incrementer methode get pour recuperer la recette intdividuelle)
+function PageRecette()
+{ 
+require('view/frontend/PageRecette.php');
+}
+//lance la page qui cree l'edition des recettes
+function pageCreationEdition()
+{ 
+require('view/frontend/EditionRecette.php');
+}
+//lance la page contact
+function pageContact()
+{ 
+require('view/frontend/Contact.php');
+}
+//lance la fonction qui créé un utilisateur
+function CreerUtilisateur()
+{ 
+require('Model/backend/EspaceGestion.php'); 
+$ICCreationUtilisateur = new modelcreerutilisateur();
+$DataUtilisateur = $ICCreationUtilisateur->CreeUtilisateur();
+require('view/frontend/Inscription.php');
+}
+//lance la fonction qui redirige la presone sur sont compte (utilisateur ou administrateur)
+function SignIn()
+{ 
+require('Model/frontend/EspaceGestion.php'); 
+$instanceseconnecter = new EspaceGestion();
+$databdseconnecterutilisateur = $instanceseconnecter->SignIn();
+require('view/frontend/ConnexionUtilisateur.php');
+}
 ?>
