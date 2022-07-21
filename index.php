@@ -1,6 +1,6 @@
 <?php 
-require('controller/frontend/controller.php');
-require('controller/backend/controller.php');
+require('Controller/Frontend/Controller.php');
+require('Controller/Backend/Controller.php');
 if (isset($_GET['action'])) 
 {
   switch ($_GET['action'])
