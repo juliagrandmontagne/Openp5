@@ -4,10 +4,11 @@ class modelcreerutilisateur
 //lance la creation d'un utilisateur
   public function CreeUtilisateur()
   {
-    require('connexion.php');
-    $sth = $bdd->prepare('INSERT INTO utilisateur (PseudoUtilisateur, MailUtilisateur, MpUtilisateur,IDRecette,Administrateur) VALUES(?, ?, ?,?, ?)');
-    $sth->execute(array(htmlspecialchars($_POST['nameuser']), htmlspecialchars($_POST['email']),htmlspecialchars($_POST['mp']),5,0));   
-    header('Location:index.php?action=utilisateur');
+    require('Connexion.php');
+    $mp = hash('ripemd160', $_POST['mp']);
+    $sth = $bdd->prepare('INSERT INTO utilisateur (PseudoUtilisateur, MailUtilisateur, MpUtilisateur, Administrateur) VALUES(?, ?, ?, ?)');
+    $sth->execute(array(htmlspecialchars($_POST['nameuser']), htmlspecialchars($_POST['email']), $mp,0));
+    header('Location:index.php?action=ProfilUtilisateur');
   } 
 } 
 ?>

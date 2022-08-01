@@ -70,7 +70,7 @@ function pageContact()
 //lance la fonction qui créé un utilisateur
 function CreerUtilisateur()
 { 
-    require('Model/Backend/EspaceGestion.php'); 
+    require('Model/Backend/CreationUtilisateur.php'); 
     $ICCreationUtilisateur = new modelcreerutilisateur();
     $DataUtilisateur = $ICCreationUtilisateur->CreeUtilisateur();
     require('View/Frontend/Inscription.php');
@@ -79,8 +79,8 @@ function CreerUtilisateur()
 function SignIn()
 { 
     require('Model/Frontend/EspaceGestion.php'); 
-    $instanceseconnecter = new EspaceGestion();
-    $databdseconnecterutilisateur = $instanceseconnecter->SignIn();
+    $ICConnecter = new EspaceGestion();
+    $DataConnecter = $ICConnecter->SignIn();
     require('View/Frontend/ConnexionUtilisateur.php');
 }
 ?>

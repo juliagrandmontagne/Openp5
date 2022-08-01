@@ -2,7 +2,7 @@
 <?php ob_start() ; ?>
   <div class="carré"> 
     <p class="titreconnection">Bonjour, vous souhaitez rejoindre l'aventure ? Pas de souci ! Inscrivez vous !</p>
-      <form action="index.php?action=creerutilisateur" method="post" id="connexionutilisateur" >   
+      <form action="index.php?action=CreerUtilisateur" method="post" id="connexionutilisateur" >   
           <div id="titre-commentaire"></div>
           <input class="nameuser" name="nameuser" placeholder="pseudo">
           <input id="comment" type="pasword" name="mp" placeholder="mot de passe">
