@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : Dim 17 juil. 2022 à 16:31
+-- Généré le : lun. 01 août 2022 à 14:45
 -- Version du serveur :  5.7.32
 -- Version de PHP : 7.4.12
 
@@ -58,15 +58,16 @@ CREATE TABLE `utilisateur` (
   `MailUtilisateur` text NOT NULL,
   `IDRecette` int(255) NOT NULL,
   `MpUtilisateur` text NOT NULL,
-  `administrateur` tinyint(1) NOT NULL
+  `Administrateur` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`PseudoUtilisateur`, `MailUtilisateur`, `IDRecette`, `MpUtilisateur`, `administrateur`) VALUES
-('utilisateur', 'mail@mail.com', 1, 'mp', 0);
+INSERT INTO `utilisateur` (`PseudoUtilisateur`, `MailUtilisateur`, `IDRecette`, `MpUtilisateur`, `Administrateur`) VALUES
+('utilisateur', 'mail@mail.com', 1, '4afb35ee9fc9720b9b2cf59529f4332478c8650f', 0),
+('utilisateure', 'mail@mail.com', 5, '4afb35ee9fc9720b9b2cf59529f4332478c8650f', 1);
 
 --
 -- Index pour les tables déchargées
@@ -76,7 +77,8 @@ INSERT INTO `utilisateur` (`PseudoUtilisateur`, `MailUtilisateur`, `IDRecette`, 
 -- Index pour la table `recette`
 --
 ALTER TABLE `recette`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `lien utilisateur-recette` (`IDUtilisateur`);
 
 --
 -- Index pour la table `utilisateur`
@@ -93,6 +95,22 @@ ALTER TABLE `utilisateur`
 --
 ALTER TABLE `recette`
   MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  MODIFY `IDRecette` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `recette`
+--
+ALTER TABLE `recette`
+  ADD CONSTRAINT `lien utilisateur-recette` FOREIGN KEY (`IDUtilisateur`) REFERENCES `utilisateur` (`IDRecette`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
