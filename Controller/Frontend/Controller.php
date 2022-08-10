@@ -50,6 +50,10 @@ function ProfilUtilisateur()
 //lance la page gestion administratif (moderateur)
 function ProfilAdministration()
 { 
+
+    require('Model/Frontend/EspaceGestion.php'); 
+    $ICAdministrateur = new EspaceGestion();
+    $DataAdministrateur = $ICAdministrateur->ProfilAdministrateur();
     require('View/Frontend/CompteModerateur.php');
 }
 //charge la page du recette (sera incrementer methode get pour recuperer la recette intdividuelle)
@@ -81,6 +85,7 @@ function SignIn()
     require('Model/Frontend/EspaceGestion.php'); 
     $ICConnecter = new EspaceGestion();
     $DataConnecter = $ICConnecter->SignIn();
+    //$DataConnecterPageU = $ICConnecter->ProfilUtilisateur();
     require('View/Frontend/ConnexionUtilisateur.php');
 }
 ?>

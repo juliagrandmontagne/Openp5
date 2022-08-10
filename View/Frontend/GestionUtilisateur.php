@@ -7,6 +7,7 @@
         <label for="site-search"></label>
         <input type="search" id="site-search" name="q">
         <button>chercher</button>
+        
       </div>
         <div class="liste"><p>ici prochainement la liste</p></div>
     </div>
