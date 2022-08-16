@@ -9,10 +9,11 @@
         <button>chercher</button>
         
       </div>
-        <div class="liste"><p>ici prochainement la liste</p></div>
+        <div class="liste"><p>ici prochainement la listes</p></div>
         <?php  foreach ($DataUtilisateur as $donnees) : ?>
- <p><?php echo $donnees['nomrecette']?></p>
- <?php endforeach; ?>
+          <p><?php echo $donnees['nomrecette']?></p>
+          <p><?php echo "coucou"?></p>
+        <?php endforeach; ?>
     </div>
   </section>   
 <?php $content = ob_get_clean() ; ?>

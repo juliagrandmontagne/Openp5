@@ -16,7 +16,10 @@
         <button>chercher</button>
       </div>
       <div class="liste"><p>ici prochainement la liste des recettes</p>
-
+      <?php  foreach ($DataAdministrateur as $donnees) : ?>
+ <p><?php echo $donnees['nomrecette']?></p>
+ 
+      </div>
   </div>
 </section>   
 <?php $content = ob_get_clean() ; ?>

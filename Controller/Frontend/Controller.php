@@ -75,7 +75,7 @@ function CreerUtilisateur()
 { 
     require('Model/Backend/CreationUtilisateur.php'); 
     $ICCreationUtilisateur = new modelcreerutilisateur();
-    $DataUtilisateur = $ICCreationUtilisateur->CreeUtilisateur();
+    $DataCréeUtilisateur = $ICCreationUtilisateur->CreeUtilisateur();
     require('View/Frontend/Inscription.php');
 }
 //lance la fonction qui redirige la presone sur sont compte (utilisateur ou administrateur)
