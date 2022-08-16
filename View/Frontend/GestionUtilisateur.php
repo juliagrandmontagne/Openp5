@@ -10,6 +10,9 @@
         
       </div>
         <div class="liste"><p>ici prochainement la liste</p></div>
+        <?php  foreach ($DataUtilisateur as $donnees) : ?>
+ <p><?php echo $donnees['nomrecette']?></p>
+ <?php endforeach; ?>
     </div>
   </section>   
 <?php $content = ob_get_clean() ; ?>

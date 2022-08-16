@@ -14,6 +14,29 @@
                     <p>vous n'etes pas inscrit?</p>           
             </form>    
     </div>
+    <?php foreach ($DataConnecter as $data) :
+        $NameBDD = $data['PseudoUtilisateur'];
+        $IdBDD = $data['IDUtilisateur'];
+        $MpBDD = $data['MpUtilisateur'];
+        $MpSaisie = $_POST['mp'];
+        $MpSaisie = hash('ripemd160', $_POST['mp']);
+        if($NameBDD == $_POST['nameuser'] && $MpBDD == $MpSaisie)
+        {
+            if($data['Administrateur'] == 0)
+            {
+                echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
+            }
+            elseif($data['Administrateur'] == 1)
+            {
+                echo "<script type='text/javascript'>document.location.replace('index.php?action=PageAdministration');</script>";
+            }
+            else
+            {
+                echo"erreur dans base de donné";
+            }
+        }
+        
+    endforeach; ?>
 </section>   
 <?php $content = ob_get_clean() ; ?>
 <?php require('Template.php'); ?>

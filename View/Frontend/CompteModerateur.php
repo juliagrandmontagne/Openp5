@@ -15,7 +15,8 @@
         <input type="search" id="site-search" name="q">
         <button>chercher</button>
       </div>
-      <div class="liste"><p>ici prochainement la liste des recettes</p></div>
+      <div class="liste"><p>ici prochainement la liste des recettes</p>
+
   </div>
 </section>   
 <?php $content = ob_get_clean() ; ?>
