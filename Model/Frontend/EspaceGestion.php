@@ -15,7 +15,7 @@ class EspaceGestion
     public function ProfilUtilisateur()
     {
       require('Connexion.php');
-      $reponse = $bdd->prepare('SELECT * FROM recette WHERE IDUtilisateur ="1"');
+      $reponse = $bdd->prepare('SELECT * FROM recette WHERE IDUtilisateur =' . $_GET["id"]);
       $reponse->execute();
       return $reponse;
       $rereponseq->cloreCursor();
