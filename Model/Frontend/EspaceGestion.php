@@ -17,14 +17,13 @@ class EspaceGestion
       require('Connexion.php');
       $reponse = $bdd->prepare('SELECT * FROM recette WHERE IDUtilisateur ="1"');
       $reponse->execute();
-      return $data;
+      return $reponse;
       $rereponseq->cloreCursor();
     }
     public function ProfilAdministrateur()
     {
       require('Connexion.php');
-
-
     }
+    
 }     
 ?>

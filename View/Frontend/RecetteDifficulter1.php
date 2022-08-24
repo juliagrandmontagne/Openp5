@@ -19,12 +19,13 @@
       <?php  foreach ($DataRecetteDeb as $donnees) : ?>   
         <article class="espacerecettes">
           <div class='titrecocktail'> 
-            <?php echo $donnees['nomrecette']?>
-          </div> 
+            <?php echo $donnees['nomrecette']?>         
+           
           <div class="recette"><?php echo $donnees['Recette']?> <br>
             <img src="<?php echo $donnees['image']?>" alt="illustrationCoktail" class="illustrationCoktail"> 
           </div>
-          <div class="suite"><a class="suitelien" href="#">lire la suite</a></div>   
+            <?php $identite=$donnees['ID']?>
+          <div class="suite"><a class="suitelien" href="index.php?action=PageRecette&id=<?php echo "$identite"?>">lire la suite</a></div>   
         </article>
     <?php endforeach; ?>
   </section>

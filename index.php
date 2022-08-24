@@ -53,9 +53,13 @@ if (isset($_GET['action']))
     PageContact();
     break;
     //lance la fonction qui créé un uilisateur
-    case'CreerUtilisateur';
-    CreerUtilisateur();
+    case'EditionRecette';
+    EditionRecette();
     break;
+    case'SupressionRecette';
+    SupressionRecette();
+    break;
+  
    }
 
 }
