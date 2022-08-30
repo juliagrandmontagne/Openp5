@@ -59,7 +59,7 @@ if (isset($_GET['action']))
     case'SupressionRecette';
     SupressionRecette();
     break;
-  
+
    }
 
 }

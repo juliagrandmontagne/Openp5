@@ -278,13 +278,7 @@ p.titreconnection {
   margin-top: 40px;
   overflow: scroll;
 }
-.liste {
-  border-bottom: 1px solid #c0bbbb;
-  /* border-width: 1px; */
-  /* border-style: solid; */
-  margin-left: 20px;
-  margin-right: 20PX;
-}
+
 /*administratif*/
 .gestionadministratifrecette {
   width: 45%;
@@ -296,7 +290,16 @@ p.titreconnection {
   margin: auto;
   margin-top: 40px;
   overflow: scroll;
- 
+}
+.icone {
+  background-color: green;
+  width: 30px;
+  border-radius: 30px;
+  color: white;
+  border-color: black;
+  border-width: 1px;
+  display: grid;
+  justify-items: right;
 }
 .gestionadministratifuilisateur {
   width: 45%;
@@ -331,12 +334,20 @@ section#admin {
     border-radius: 30px;
 }
 .bouttonretour {
-  width: 30px;
-  height: 30px;
-  background-color: green;
-  margin-top: 40px;
-  margin-left: 40px;
-  border-radius: 30PX;
+    width: 50px;
+    height: 30px;
+    background-color: green;
+    margin-top: 40px;
+    margin-left: 40px;
+    border-radius: 30PX;
+}
+
+.retour
+{
+  margin: 8px;
+  margin-top: 15px;
+color: #ffffff;
+
 }
 /*editionrecette*/
 .recetteprevous {
@@ -378,6 +389,32 @@ label {
   display: grid;
   justify-items: center;
   font-family: Quintessential-Regular;
+}
+.titrerecetteutilisateur 
+  {
+ display: grid;
+  justify-items: left;
+}
+.listeutilisateur {
+  justify-items: right;
+  display: grid;
+}
+.larecette {
+  display: grid;
+  justify-items: center;
+  margin: 1;
+  margin: 10px;
+  /* min-height: 300px; */
+}
+.lesingrédients {
+  display: grid;
+  justify-items: center;
+  margin: 10px;
+}
+.titrecette {
+  justify-items: center;
+  display: grid;
+  font-size: 20px;
 }
 textarea {
   width: 90%;

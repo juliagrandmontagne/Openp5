@@ -13,20 +13,20 @@
         <button>chercher</button>
         
       </div>
-        <div class="liste"><p>ici prochainement la listes</p></div>
+        <div class="liste">
         <?php  foreach ($DataUtilisateur as $donnees) : ?>
-          <p><?php echo $donnees['nomrecette']?></p>
-          <form action="index.php?action=SupressionRecette" method="post">
-
-                <button  type="submit" class="btn-submit"><i class="fa fa-trash" aria-hidden="true"class="icone"></i></button>
+          <label class="titrerecetteutilisateur"><?php echo $donnees['nomrecette']?></label>
+          <form action="index.php?action=SupressionRecette" method="post" class="listeutilisateur">
+  <div class="iconemodifier">
+    <input type="text">
+                <button  type="submit" class="icone"><i class="fa fa-trash" aria-hidden="true" class="icone" class="listeutilisateur"></i></button>
             </form>          
-            <form action="index.php?action=EditionRecette" method="post">
-<button  type="submit" class="btn-submit"> <i class='fas fa-edit'class="icone" ></i></button>
-</form>
-         
-          
-         
+            <form action="index.php?action=EditionRecette" method="post" class="listeutilisateur">
+              <button  type="submit" class="icone"> <i class='fas fa-edit'class="icone" ></i></button>
+</div>
+            </form>
         <?php endforeach; ?>
+      </div>
     </div>
   </section>   
 <?php $content = ob_get_clean() ; ?>

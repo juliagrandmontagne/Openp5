@@ -45,7 +45,9 @@ function ProfilUtilisateur()
     require('Model/Frontend/EspaceGestion.php'); 
     $ICUtilisateur = new EspaceGestion();
     $DataUtilisateur = $ICUtilisateur->ProfilUtilisateur();
+   // $DataUtilisateurperso = $ICUtilisateurperso-> Entete();
     require('View/Frontend/GestionUtilisateur.php');
+   // require('View/Frontend/Headerbis.php')
 }
 //lance la page gestion administratif (moderateur)
 function ProfilAdministration()
@@ -58,6 +60,9 @@ function ProfilAdministration()
 //charge la page du recette (sera incrementer methode get pour recuperer la recette intdividuelle)
 function PageRecette()
 { 
+    require('Model/Frontend/Recette.php');    
+    $ICPagerecette = new Recette();
+    $DataPagerecette= $ICPagerecette->RecupereRecette ();
     require('View/Frontend/PageRecette.php');
 }
 //lance la page qui cree l'edition des recettes

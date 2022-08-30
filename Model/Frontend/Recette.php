@@ -28,5 +28,14 @@ class Recette
         return $data;
         $rereponseq->cloreCursor();
     }
+    public function RecupereRecette ()
+    {
+        require('Connexion.php');
+        $reponse = $bdd->prepare('SELECT * FROM recette WHERE ID =' . $_GET["id"]);
+        $reponse->execute();
+        $data = $reponse->fetchAll();
+        return $data;
+        $rereponseq->cloreCursor();
+    }
 }     
 ?>

@@ -7,7 +7,7 @@
                     </ul>
                  </nav>
         <div id="banniere_menu"> 
-            <h1 id="titre">future titre</h1>		
+            <h1 id="titre">bienvenue chez les Tout-en-canons</h1>		
             <div id="barre">
              <img src="Images/Mojito.jpg" alt="logo de OH-lique" id="logo">
                  <nav>

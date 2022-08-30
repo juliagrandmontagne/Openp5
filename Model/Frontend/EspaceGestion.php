@@ -20,6 +20,14 @@ class EspaceGestion
       return $reponse;
       $rereponseq->cloreCursor();
     }
+    public function Entete()
+    {
+      require('Connexion.php');
+      $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE IDUtilisateur =' . $_GET["id"]);
+      $reponse->execute();
+      return $reponse;
+      $rereponseq->cloreCursor();
+    }
     public function ProfilAdministrateur()
     {
       require('Connexion.php');

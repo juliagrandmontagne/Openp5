@@ -2,7 +2,7 @@
 <?php ob_start() ; ?>
 <section id="main">
     <div class="carré">
-        <p class="titreconnection">Bonjour, vous souhaitez vous connecter pour gerez vos recette ?</p>
+        <p class="titreconnection">Bonjour, vous souhaitez vous connecter pour gerer vos recettes ?</p>
 
             <form action="index.php?action=SignIn" method="post" id="connexionutilisateur" >  
  
