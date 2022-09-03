@@ -266,8 +266,14 @@ p.titreconnection {
 .ajout {
   display: grid;
   justify-content: center;
+  color: #ffffff;
 }
-.carrégestionrecette {
+#chercher
+{
+height: 30px;
+margin-top:20px ;
+}
+.carregestionrecette {
   width: 800px;
   height: 800PX;
   border-width: 1px;
@@ -341,7 +347,14 @@ section#admin {
     margin-left: 40px;
     border-radius: 30PX;
 }
-
+.boutton {
+  background-color: green;
+  border-radius: 30px;
+}
+.none
+{
+display: none;
+}
 .retour
 {
   margin: 8px;
@@ -373,6 +386,29 @@ section#editionrecette {
   margin-top: 100px;
   margin-left: auto;
 }
+.iconeactionrecette
+{
+  display: flex;
+  flex-wrap: wrap;
+ height: 20px;
+ margin: auto;
+ margin-left:40px;
+}
+.recherche
+{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+.elementrecette{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: gray;
+}
+
 /**/
 #creationrecette {
   margin-top: 50px;
@@ -398,6 +434,7 @@ label {
 .listeutilisateur {
   justify-items: right;
   display: grid;
+  margin-left: 40px;
 }
 .larecette {
   display: grid;
