@@ -15,7 +15,21 @@
         <div class="liste">
         <?php  foreach ($DataUtilisateur as $donnees) : ?>
           <div class="elementrecette">
-          <h2 class="titrerecetteutilisateur"><?php echo $donnees['nomrecette']?></h2>
+          <h2 class="titrerecetteutilisateur"><?php echo $donnees['nomrecette']?></h2> 
+          <div class="classementrecette">
+          <?php 
+                  if( $donnees['difficulte']==1) 
+                  {echo'debutant';
+                  }
+                  if( $donnees['difficulte']==2) 
+                  {echo'intermédiaire';
+                  }
+                  if( $donnees['difficulte']==3) 
+                  {echo'confirmé';
+                  }
+                  else{''; }  
+              ?>
+            </div>
           <form action="index.php?action=SupressionRecette" method="post" class="listeutilisateur">
            <div class="iconeactionrecette">
             <input class="none" value="<?php echo $donnees['ID']?>">
@@ -25,8 +39,10 @@
              <input class="none" value="<?php echo $donnees['ID']?>"> 
               <button  type="submit" class="icone"> <i class='fas fa-edit'class="icone" ></i></button>
           </form>
+                   
            </div>
            </div>
+ 
         <?php endforeach;?>
        </div>
     </div>

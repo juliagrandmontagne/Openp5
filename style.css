@@ -307,6 +307,11 @@ margin-top:20px ;
   display: grid;
   justify-items: right;
 }
+element.style {
+  display: block;
+  justify-content: center;
+  margin: auto;
+}
 .gestionadministratifuilisateur {
   width: 45%;
   height: 800PX;
