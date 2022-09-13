@@ -35,11 +35,16 @@
             <input class="none" value="<?php echo $donnees['ID']?>">
               <button  type="submit" class="icone"><i class="fa fa-trash" aria-hidden="true" class="listeutilisateur"></i></button>
           </form>          
-          <form action="index.php?action=EditionRecette" method="post" class="listeutilisateur">
+          <form action="index.php?action=PageCreationEdition" method="post" class="listeutilisateur">
              <input class="none" value="<?php echo $donnees['ID']?>"> 
               <button  type="submit" class="icone"> <i class='fas fa-edit'class="icone" ></i></button>
+   <?php $identite=$donnees['ID']?>
+
           </form>
-                   
+          <form action="index.php?action=PageRecette&id=<?php echo "$identite"?>" method="post" class="listeutilisateur">
+             <input class="none" value="<?php echo $donnees['ID']?>"> 
+              <button  type="submit" class="icone" class='fa-solid fa-user'></button>
+          </form>
            </div>
            </div>
  

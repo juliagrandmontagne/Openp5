@@ -112,6 +112,7 @@ a.boutonconnexion {
   display: grid;
   justify-content: center;
   margin: auto;
+  padding: 60px;
 }
 /*menu trie alcool*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -368,7 +369,7 @@ color: #ffffff;
 
 }
 /*editionrecette*/
-.recetteprevous {
+#recetteprevous {
   width: 75%;
   height: 700px;
   border-width: 1px;
@@ -419,7 +420,8 @@ justify-content: space-evenly;
   margin-top: 50px;
 }
 #titrerecette {
-  width: 90%;
+  width: 98%;
+  margin: auto;
 }
 .titrerecette {
   display: grid;
@@ -435,6 +437,10 @@ label {
   {
  display: grid;
   justify-items: left;
+}
+#valider {
+  display: block;
+  margin: auto;
 }
 .listeutilisateur {
   justify-items: right;
@@ -459,9 +465,10 @@ label {
   font-size: 20px;
 }
 textarea {
-  width: 90%;
+  width: 99%;
   display: grid;
   align-items: center;
+  border-radius: 30px;
 }
 #Difficulte {
   margin: 0px;
@@ -471,6 +478,13 @@ textarea {
   display: block;
   width: 75%;
   margin-left: 20px;
+}
+#previoustitrecette {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#previouslesingrédients {
+  margin-bottom: 50px;
 }
 /*footer*/
 
@@ -514,6 +528,24 @@ footer {
   font-size: 30px;
   font-family: Merienda-Regular;
   margin-top: 100px;
+}
+#listedifficuter {
+  display: block;
+  justify-items: center;
+  margin: auto;
+    margin-bottom: auto;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1300px)
+{
+.edition
+{
+width: 50%;
+}
+#recetteprevous
+{
+  width: 49%;
+  }
 }
 @media screen and (max-width: 913px)
 {
@@ -571,4 +603,21 @@ ul.laconnexion {
   width: 10px;
   margin-left: 50px;
 }
+}
+@media screen and (max-width: 740px)
+{
+  .gestionadministratifrecette {
+
+    margin: auto;
+    margin-top: 0px;
+    width: 100%;
+}
+.gestionadministratifuilisateur {
+
+  margin: auto;
+  margin-top: 0px;
+  width: 90%;
+  
+}
+
 }
