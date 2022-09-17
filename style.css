@@ -271,8 +271,17 @@ p.titreconnection {
 }
 #chercher
 {
-height: 30px;
-margin-top:20px ;
+
+ 
+    margin-top: 20px;
+    background-color: green;
+    border-radius: 30px;
+    color: white;
+    border-color: black;
+    border-width: 1px;
+    height: 30px;
+    margin-top: 25px;
+
 }
 .carregestionrecette {
   width: 800px;
@@ -299,14 +308,17 @@ margin-top:20px ;
   overflow: scroll;
 }
 .icone {
-  background-color: green;
-  width: 30px;
-  border-radius: 30px;
-  color: white;
-  border-color: black;
-  border-width: 1px;
-  display: grid;
-  justify-items: right;
+
+    background-color: green;
+    width: 50px;
+    border-radius: 30px;
+    color: white;
+    border-color: black;
+    border-width: 1px;
+
+    justify-items: right;
+    padding: 10px;
+ 
 }
 element.style {
   display: block;
@@ -419,7 +431,10 @@ justify-content: space-evenly;
   border-bottom-width: 1px;
   border-bottom-color: gray;
 }
-
+.classementrecette {
+  margin-top: 20px;
+  font-family: "Merienda-Regular";
+}
 /**/
 #creationrecette {
   margin-top: 50px;
