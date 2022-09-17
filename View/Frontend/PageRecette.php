@@ -1,7 +1,7 @@
 <?php $title = 'pagerecette' ; ?>
 <?php ob_start() ; ?>
     <section id="main">
-        <div class="bouttonretour"><a class="retour" href="index.php?action=PageRecetteDebutant">retour</a></div>
+        <div class="bouttonretour"><a class="retour" href="index.php?action=boutonretour">retour</a></div>
             <div class="recette1">
             <?php  foreach ($DataPagerecette as $donnees) : ?>
                 <div class="titrecette"><?php echo $donnees['nomrecette']?></div>

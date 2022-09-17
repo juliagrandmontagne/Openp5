@@ -91,4 +91,11 @@ function SignIn()
     $DataConnecter = $ICConnecter->SignIn();
     require('View/Frontend/ConnexionUtilisateur.php');
 }
+function boutonretour()
+{ 
+    require('Model/Frontend/Retour.php'); 
+    $ICRetour = new Retour();
+    $DataRetour = $ICRetour->BoutonRetour();
+    require('View/Frontend/PageRecette.php');
+}
 ?>

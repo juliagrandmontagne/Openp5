@@ -18,9 +18,9 @@
 
                 </div>
                     <label class="Recette" for="Recette"> Recette</label>
-                    <textarea id="Recette" name="Recette" ></textarea>
-                    <label class="Ingrédients" for="Ingrédients">Ingrédients</label>
-                    <textarea id="Ingrédients" name="Ingrédients"></textarea>
+                    <textarea id="Recette" name="Recette" onchange="changecontenurecette()"></textarea>
+                    <label class="Ingredients" for="Ingredients">Ingrédients</label>
+                    <textarea id="Ingredients" name="Ingredients" onchange="changecontenuingredients()"></textarea>
                     <label for="file">Image</label>
                     <input type="file" name="file" id="file">
                     <table align="center">
@@ -62,11 +62,19 @@ function ok()
     }
     function changecontenutitre() 
 	{
-    document.getElementById('texte').innerHTML = "I have changed!"; 
+    document.getElementById('previoustitrecette').innerHTML = document.getElementById('titrerecette').value; 
+}
+function changecontenuingredients() 
+	{
+    document.getElementById('previouslesingrédients').innerHTML = document.getElementById('Ingredients').value; 
+}
+function changecontenurecette() 
+	{
+    document.getElementById('previoustitrecette').innerHTML = document.getElementById('Recette').value; 
 }
 </script> 
     </div>
 </section>  
 
 <?php $content = ob_get_clean() ; ?>
-<?php require('Template.php'); ?>
+<?php require('Templatebis.php'); ?>
