@@ -7,8 +7,9 @@ class EspaceGestionback
       require('Connexion.php');
       $reponse = $bdd->prepare('DELETE FROM recette WHERE ID=?');
       $reponse->execute(array(htmlspecialchars($_POST['ID'])));
-      return $reponse;
+      return $reponse; 
       $rereponseq->cloreCursor();
+      header('Location:index.php?action=PageAccueil');
     }
     public function EditionRecette()
     {
