@@ -4,8 +4,11 @@ class EspaceGestionback
 
     public function SupressionRecette()
     {
-      header("Location:index.php?action=PageAccueil");
       require('Connexion.php');
+      $reponse = $bdd->prepare('DELETE FROM recette WHERE ID=?');
+      $reponse->execute(array(htmlspecialchars($_POST['ID'])));
+      return $reponse;
+      $rereponseq->cloreCursor();
     }
     public function EditionRecette()
     {

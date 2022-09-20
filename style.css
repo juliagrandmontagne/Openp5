@@ -388,7 +388,7 @@ text-decoration: none;
 /*editionrecette*/
 #recetteprevous {
   width: 75%;
-  height: 700px;
+  height: 742px;
   border-width: 1px;
   border-style: solid;
   border-color: black;
@@ -401,6 +401,7 @@ text-decoration: none;
   border-style: solid;
   border-color: black;
   border-radius: 30px;
+  padding: 20px;
 }
 section#editionrecette {
   display: flex;

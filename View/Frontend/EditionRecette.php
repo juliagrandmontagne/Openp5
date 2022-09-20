@@ -7,11 +7,11 @@
     <div class="larecette" id="previouslarecette">Recette</div></div>
     <div class="edition">
         <form action="#" method="post" id="creationrecette" >   
-            <label  class="titrerecette" for="titrerecette" >titre de la recette</label>
+            <label  class="titrerecette" for="titrerecette" >Titre de la recette</label>
                 <input  type="text" class="titrerecette" name="titrerecette" id="titrerecette" required onchange="changecontenutitre()">
                 <div>
-                    <label for="difficulté">difficulté</label>
-                    <select name="difficulté"  id="listedifficuter">
+                    <label for="difficulte">difficulté</label>
+                    <select name="difficulte"  id="listedifficuter">
                     <option selected value="1">Débutant</option>
                     <option value="2">Intermédiaire</option>
                     <option value="3" >Confirmer</option>
@@ -26,15 +26,16 @@
                     <table align="center">
 
                     <tr>
-                    <td align="center"><label for="couleur">Couleur du texte :</label>
+                    <td align="center"><label for="liste">Couleur du texte :</label>
                     <select name="liste" size="1" id="listeCouleur" onchange="changecouleur()">
-                    <option selected style="color:#ffff" value="#ffff">blanc</option>
+                    <option selected style="color:#ffff" value="#ffff">Blanc</option>
                     <option style="color:#ffddbd" value="#ffddbd">Rouge</option>
                     <option style="color:#c4f8d8" value="#c4f8d8">Vert</option>
                     <option style="color:#bde0ff" value="#bde0ff" >Bleu</option>
-                    <option style="color:#ebf1b6" value="#ebf1b6">Jaune</option>
+                    <option style="color:#f9eac3" value="#f9eac3">Jaune</option>
 
                     </select>
+                   
                     </td>
                     </tr>
                     <tr>
@@ -43,7 +44,6 @@
                     </td>
                     </tr>
                     </table>
-
                     <button  type="submit" class="btn-submit" name="valider" id="valider"  onClick="ok()">VALIDER</button>
         </form> 
         <script language="javascript">
@@ -59,6 +59,7 @@ function ok()
 	{
 	localStorage.setItem('option2', document.getElementById('listeCouleur').selectedIndex);
 	localStorage.setItem('option1', document.getElementById('listeTaille').selectedIndex);
+
     }
     function changecontenutitre() 
 	{
