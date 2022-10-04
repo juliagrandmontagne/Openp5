@@ -9,7 +9,13 @@
 	</head>
     <body>
         <div id="contenaire">
-            <?php require ('Header.php'); ?>
+        <?php if (isset($_SESSION['user']))
+         {
+             require ('Headerbis.php'); 
+          } 
+           else  {
+             require ('Header.php');
+          } ?>
             <?=$content ?>
             <?php require ('Footer.php'); ?>
         </div>

@@ -230,6 +230,7 @@ input
   margin-bottom: 40px;
   border-radius: 30px;
   width: 300px;
+  padding: 10px;
 }
 #motdepasse 
 {
@@ -438,7 +439,7 @@ justify-content: space-evenly;
 }
 /**/
 #creationrecette {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 #titrerecette {
   width: 98%;
@@ -448,6 +449,7 @@ justify-content: space-evenly;
   display: grid;
   justify-items: center;
   font-family: Quintessential-Regular;
+  margin-left: -10px;
 }
 label {
   display: grid;
@@ -491,6 +493,8 @@ textarea {
   align-items: center;
   border-radius: 30px;
   height: 100px;
+  padding: 10px;
+  margin-left: -10px;
 }
 #Difficulte {
   margin: 0px;
@@ -498,7 +502,7 @@ textarea {
 #site-search {
   margin-top: 30px;
   display: block;
-  width: 75%;
+  width: 70%;
   margin-left: 20px;
 }
 #previoustitrecette {
@@ -572,6 +576,10 @@ width: 50%;
 }
 @media screen and (max-width: 913px)
 {
+  .carregestionrecette {
+    width: 100%;
+  }
+  
   .gestionadministratifrecette {
 
     margin: auto;
@@ -650,4 +658,19 @@ ul.laconnexion {
     width: 100%;
     margin:0px;
   }
+  .elementrecette {
+    display: flex;
+    height: 140px;
+  }
+
+  .listeutilisateur {
+
+    margin-bottom: 20px;
+  }
+  .carré {
+
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
 }

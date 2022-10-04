@@ -24,10 +24,14 @@
         {
             if($data['Administrateur'] == 0)
             {
+            session_start();
+            $_SESSION["connecter"] = "1";
                 echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
             }
             elseif($data['Administrateur'] == 1)
             {
+                session_start();
+                $_SESSION["connecter"] = "1";
                 echo "<script type='text/javascript'>document.location.replace('index.php?action=PageAdministration');</script>";
             }
             else
@@ -39,4 +43,5 @@
     endforeach; ?>
 </section>   
 <?php $content = ob_get_clean() ; ?>
+
 <?php require('Template.php'); ?>

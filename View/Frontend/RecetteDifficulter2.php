@@ -29,4 +29,4 @@
    <?php endforeach; ?>
   </section>
 <?php $content = ob_get_clean() ; ?>
-<?php require('Template.php'); ?>
+<?php require('Templatebis.php'); ?>
