@@ -31,7 +31,18 @@ class EspaceGestion
     public function ProfilAdministrateur()
     {
       require('Connexion.php');
+      $reponse = $bdd->prepare('SELECT * FROM recette');
+      $reponse->execute();
+      return $reponse;
+      $rereponseq->cloreCursor();
     }
-    
+    public function ProfilAdministrateurutilisateur()
+    {
+      require('Connexion.php');
+      $reponse = $bdd->prepare('SELECT * FROM utilisateru');
+      $reponse->execute();
+      return $reponse;
+      $rereponseq->cloreCursor();
+    }
 }     
 ?>

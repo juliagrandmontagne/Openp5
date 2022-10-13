@@ -25,7 +25,7 @@
                 <input type="file" name="file" id="file">
                     <table align="center">
                         <tr>
-                        <td align="center"><label for="liste">Couleur du texte :</label>
+                        <td align="center"><label for="liste">Couleur du fond :</label>
                             <select name="liste" size="1" id="listeCouleur" onchange="changecouleur()">
                                 <option selected style="color:#ffff" value="#ffff">Blanc</option>
                                 <option style="color:#ffddbd" value="#ffddbd">Rouge</option>
@@ -48,7 +48,7 @@
 </section>  
 
 <?php $content = ob_get_clean() ; ?>
-<?php require('Templatebis.php'); ?>
+<?php require('Template.php'); ?>
                 <script language="javascript">
                     function changetaille() 
                         {

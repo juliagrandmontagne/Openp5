@@ -9,9 +9,9 @@
 	</head>
     <body>
         <div id="contenaire">
-        <?php if (isset($_SESSION['user']))
+        <?php if (isset($_SESSION['connecter']))
          {
-             require ('Headerbis.php'); 
+            require ('Headerbis.php'); 
           } 
            else  {
              require ('Header.php');

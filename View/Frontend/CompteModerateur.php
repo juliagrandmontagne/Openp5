@@ -8,6 +8,9 @@
         <button>chercher</button>
       </div>
       <div class="liste"><p>ici prochainement la liste d'utilisateur</p></div>
+      <?php  foreach ($DataAdministrateurutilisateur as $donnees) : ?>
+        <p><?php echo $donnees['PseudoUtilisateur']?></p>
+        <?php endforeach?>
     </div>
     <div class="gestionadministratifrecette">
       <div class="recherche">
@@ -18,7 +21,7 @@
       <div class="liste"><p>ici prochainement la liste des recettes</p>
       <?php  foreach ($DataAdministrateur as $donnees) : ?>
  <p><?php echo $donnees['nomrecette']?></p>
- 
+ <?php endforeach?>
       </div>
   </div>
 </section>   

@@ -1,10 +1,18 @@
-{
-  "couleur": [
-    { "blanc": "#ffff",
-      "Rouge": "#ffddbd",
-      "Vert": "#c4f8d8",
-      "Bleu": "#bde0ff",
-      "jaune": "#f9eac3"
+[
+    {
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Vert",
+        "Bleu",
+        "Jaune"
+      ],
+      "code": [
+        "#ffffff",
+        "#ffddbd",
+        "#c4f8d8",
+        "#bde0ff",
+        "#f9eac3"
+      ]
     }
-  ]
-}
+]

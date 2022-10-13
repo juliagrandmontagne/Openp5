@@ -55,6 +55,7 @@ function ProfilAdministration()
     require('Model/Frontend/EspaceGestion.php'); 
     $ICAdministrateur = new EspaceGestion();
     $DataAdministrateur= $ICAdministrateur->ProfilAdministrateur();
+    $DataAdministrateurutilisateur= $ICAdministrateur->ProfilAdministrateurutilisateur();
     require('View/Frontend/CompteModerateur.php');
 }
 //charge la page du recette (sera incrementer methode get pour recuperer la recette intdividuelle)

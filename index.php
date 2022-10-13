@@ -60,10 +60,9 @@ if (isset($_GET['action']))
     SupressionRecette();
     break;
     case'boutonretour';
-boutonretour();
-  break;
+    boutonretour();
+    break;
    }
-
 }
 else
 {

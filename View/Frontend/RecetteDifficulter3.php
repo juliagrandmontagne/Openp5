@@ -27,4 +27,4 @@
   </article>
 <?php endforeach; ?>
 <?php $content = ob_get_clean() ; ?>
-<?php require('Templatebis.php'); ?>
+<?php require('Template.php'); ?>
