@@ -5,7 +5,7 @@ class modelcreerrecette
   public function creerecette()
   {
     require('connexion.php');
-    $sth = $bdd->prepare('INSERT INTO recette ( Ingredients, nomrecette, Recette,	difficulte, couleur, IDUtilisateur, image) VALUES(?, ?, ?, ?, ?, ?, ?)');
+    $sth = $bdd->prepare('INSERT INTO recette ( Ingredients, nomrecette, Recette,	difficulte, couleur, IDUtilisateur, Image) VALUES(?, ?, ?, ?, ?, ?, ?)');
     $sth->execute(array( htmlspecialchars($_POST['Ingredients']), htmlspecialchars($_POST['titrerecette']), htmlspecialchars($_POST['Recette']), htmlspecialchars($_POST["difficulte"]), htmlspecialchars($_POST['liste']), "1","images"));   
   } 
 } 
