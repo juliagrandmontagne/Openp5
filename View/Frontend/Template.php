@@ -9,6 +9,7 @@
 	</head>
     <body>
         <div id="contenaire">
+        <?php session_start();?>
         <?php if (isset($_SESSION['connecter']))
          {
             require ('Headerbis.php'); 
