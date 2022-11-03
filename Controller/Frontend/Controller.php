@@ -45,10 +45,19 @@ function ProfilUtilisateur()
     require('Model/Frontend/EspaceGestion.php'); 
     $ICUtilisateur = new EspaceGestion();
     $DataUtilisateur = $ICUtilisateur->ProfilUtilisateur();
-   // $DataUtilisateurperso = $ICUtilisateurperso-> Entete();
+    //$DataUtilisateurperso = $ICUtilisateur-> Searchbar();
     require('View/Frontend/GestionUtilisateur.php');
    // require('View/Frontend/Headerbis.php')
 }
+function Searchbar()
+{ 
+    require('Model/Frontend/EspaceGestion.php'); 
+    $ICsearch = new EspaceGestion();
+   $DataUtilisateurperso = $ICsearch-> Searchbar();
+    require('View/Frontend/GestionUtilisateur.php');
+   // require('View/Frontend/Headerbis.php')
+}
+
 //lance la page gestion administratif (moderateur)
 function ProfilAdministration()
 { 

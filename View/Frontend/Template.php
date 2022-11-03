@@ -12,7 +12,8 @@
         <?php session_start();?>
         <?php if (isset($_SESSION['connecter']))
          {
-            require ('Headerbis.php'); 
+           //require ('Headerbis.php'); 
+           require ('Header.php');
           } 
            else  {
              require ('Header.php');

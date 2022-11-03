@@ -8,9 +8,12 @@
 </div>
     <div class="carregestionrecette">
       <div class="recherche">
+      <form action="index.php?action=Searchbar" method="GET">
         <label for="site-search"></label>
-        <input type="search" id="site-search" name="q">
-        <button id="chercher">chercher</button>
+        <input type="search" id="site-search" name="q" placeholder="recherche">
+        <input type="submit" name="chercher">
+      </form>
+        
       </div>
         <div class="liste">
         <?php  foreach ($DataUtilisateur as $donnees) : ?>
@@ -44,6 +47,7 @@
           <form action="index.php?action=PageRecette&id=<?php echo "$identite"?>" method="post" class="listeutilisateur">
              <input class="none" name="ID" value="<?php echo $donnees['ID']?>"> 
               <button  type="submit" class="icone" class='fa-solid fa-user'></button>
+              <p><?php echo("{$_SESSION['utilisateur']}");?></p>
           </form>
            </div>
            </div>

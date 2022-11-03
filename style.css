@@ -309,17 +309,15 @@ p.titreconnection {
   overflow: scroll;
 }
 .icone {
-
-    background-color: green;
-    width: 50px;
-    border-radius: 30px;
-    color: white;
-    border-color: black;
-    border-width: 1px;
-
-    justify-items: right;
-    padding: 10px;
- 
+  background-color: green;
+  width: 30px;
+  border-radius: 10px;
+  color: white;
+  border-color: black;
+  border-width: 1px;
+  justify-items: right;
+  padding: 0px;
+  height: 40px;
 }
 element.style {
   display: block;

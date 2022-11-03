@@ -16,3 +16,11 @@
       ]
     }
 ]
+html = "";
+obj = {
+    "#ffffff" : "Blanc",
+    "#ffddbd": "Rouge",
+    "#c4f8d8" : "Vert",
+    "#bde0ff": "Bleu",
+    "#f9eac3" : "Jaune"
+}

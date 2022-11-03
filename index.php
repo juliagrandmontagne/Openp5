@@ -62,6 +62,9 @@ if (isset($_GET['action']))
     case'boutonretour';
     boutonretour();
     break;
+    case'Searchbar';
+    Searchbar();
+  break;
    }
 }
 else
