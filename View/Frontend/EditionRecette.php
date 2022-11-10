@@ -1,6 +1,6 @@
 <?php $title = 'editionrecette' ; ?>
 <?php ob_start() ; ?>
-<section id="EditionRecette">
+<section id="laEditionRecette">
     <div id="RecettePrevous">   
         <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
         <div class="LesIngrédients" id="PreviousLesIngrédients">Ingredients</div> 
@@ -27,11 +27,8 @@
                         <td align="center"><label for="liste">Couleur du fond :</label>
                             <select name="liste" size="1" id="listeCouleur" onchange="changecouleur()">
                             
-                                <option selected style="color:#ffff" value="#ffff">Blanc</option>
-                                <option style="color:#ffddbd" value="#ffddbd">Rouge</option>
-                                <option style="color:#c4f8d8" value="#c4f8d8">Vert</option>
-                                <option style="color:#bde0ff" value="#bde0ff" >Bleu</option>
-                                <option style="color:#f9eac3" value="#f9eac3">Jaune</option>
+                                <option value="#ffff" >Blanc</option>
+                                <option value="#ffddbd">Rouge</option>
                             </select>
                             </td>
                             </tr>
