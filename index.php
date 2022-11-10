@@ -53,18 +53,28 @@ if (isset($_GET['action']))
     PageContact();
     break;
     //lance la fonction qui créé un uilisateur
-    case'EditionRecette';
+    case'Creationrecette';
     EditionRecette();
     break;
+    //supression des
     case'SupressionRecette';
     SupressionRecette();
     break;
+    //
     case'boutonretour';
     boutonretour();
     break;
+    //instauration de la searchbar
     case'Searchbar';
     Searchbar();
-  break;
+    break;
+    //suppression
+    case'SupressionRecetteAdmin';
+    SupressionRecetteAdmin();
+    break;
+    case'SupressionProfilAdmin';
+    SupressionProfilAdmin();
+    break;
    }
 }
 else

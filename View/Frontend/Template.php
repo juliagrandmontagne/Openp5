@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+     <?php session_start();?>
+     <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css"/>
         <script src="https://kit.fontawesome.com/a1efcfbe5e.js" crossorigin="anonymous"></script>
-		<title>alcoolique</title>
+		<title>Tout-en-canons</title>
 	</head>
     <body>
-        <div id="contenaire">
-        <?php session_start();?>
+        <div id="Contenaire">
+   
         <?php if (isset($_SESSION['connecter']))
          {
            //require ('Headerbis.php'); 

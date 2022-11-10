@@ -1,6 +1,7 @@
-<?php $title = 'Accueil' ; ?>
-  <div id="trieoh">
-    <aside class="sidebar">
+<?php $title = 'recette' ; ?>
+<?php ob_start() ; ?>
+  <section id="FiltreAlcool">
+    <aside class="MenuFiltreAlcool">
       <nav class="nav" >
         <ul>
           <li><a class="oh" href="#">Rhum</a></li></br>
@@ -13,20 +14,23 @@
         </ul>
       </nav>
     </aside>
-  </div>  
-<?php ob_start() ; ?>
-<section id="page">
-  <?php  foreach ($datarecetteint as $donnees) : ?>   
-    <article class="espacerecettes">
-          <div class='titrecocktail'> 
-            <?php echo $donnees['nomrecette']?>
-          </div> 
-          <div class="recette"><?php echo $donnees['Recette']?> <br>
-            <img src="<?php echo $donnees['image']?>" alt="illustrationCoktail" class="illustrationCoktail"> 
-          </div>
-          <div class="suite"><a class="suitelien" href="#">lire la suite</a></div>   
+</section> 
+<section id="Pages"> 
+  <?php  foreach ($datarecetteint as $donnees) : ?>  
+    <article class="EspaceRecettes">
+      <div class='TitreCocktail'> 
+      <h2><?php echo $donnees['nomrecette']?></h2>
+      </div>     
+      <div class="Recette">
+        <?php echo $donnees['Recette']?> <br>
+        <img src="<?php echo $donnees['image']?>" alt="IllustrationCoktail" class="IllustrationCoktail"> 
+      </div>
+      <?php $identite=$donnees['ID']?>
+        <div class="Suite"><a class="SuiteLien" href="index.php?action=PageRecette&id=<?php echo "$identite"?>">lire la suite</a>
+        </div>   
     </article>
-   <?php endforeach; ?>
-  </section>
+  <?php endforeach; ?>
+</section>
 <?php $content = ob_get_clean() ; ?>
 <?php require('Template.php'); ?>
+ 

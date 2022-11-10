@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+ <?php session_start();?>
+     <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -8,8 +9,16 @@
 		<title>Tout-en-canons</title>
 	</head>
     <body>
-        <div id="contenaire">
-            <?php require ('Headerbis.php'); ?>
+        <div id="Contenaire">
+   
+        <?php if (isset($_SESSION['connecter']))
+         {
+           require ('Headerbis.php'); 
+           //require ('Header.php');
+          } 
+           else  {
+             require ('Header.php');
+          } ?>
             <?=$content ?>
             <?php require ('Footer.php'); ?>
         </div>

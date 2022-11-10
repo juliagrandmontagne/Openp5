@@ -1,3 +1,3 @@
 <footer >	
-    <p id=baspage><a href="index.php?action=PageContact" class="piedpage">Nous contacter</a><br><a href="#" class="piedpage">Mentions légales</a> <br><a href="#" class="piedpage">Gestions des Cookies</a> <br> <a href="#" class="piedpage">Attribution des images</a><br></p>
+    <p id=BasPage><a href="index.php?action=PageContact" class="PiedPage">Nous contacter</a><br><a href="#" class="PiedPage">Mentions légales</a> <br><a href="#" class="PiedPage">Gestions des Cookies</a> <br> <a href="#" class="PiedPage">Attribution des images</a><br></p>
 </footer> 

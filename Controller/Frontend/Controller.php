@@ -53,11 +53,10 @@ function Searchbar()
 { 
     require('Model/Frontend/EspaceGestion.php'); 
     $ICsearch = new EspaceGestion();
-   $DataUtilisateurperso = $ICsearch-> Searchbar();
+    //$DataUtilisateurperso = $ICsearch-> Searchbar();
     require('View/Frontend/GestionUtilisateur.php');
    // require('View/Frontend/Headerbis.php')
 }
-
 //lance la page gestion administratif (moderateur)
 function ProfilAdministration()
 { 
@@ -78,6 +77,20 @@ function PageRecette()
 //lance la page qui cree l'edition des recettes
 function pageCreationEdition()
 { 
+    require('View/Frontend/EditionRecette.php');
+}
+function Creationrecette()
+{ 
+    require('Model/Backend/CreerFicheRecette.php');
+    $ICCreationRecette = new modelcreerrecette();
+    $DataCreeRecette = $ICCreationRecette->CreeRecette();
+    require('View/Frontend/EditionRecette.php');
+}
+function EditionRecette()
+{ 
+    require('Model/Backend/CreerFicheRecette.php');
+    $ICCreationRecette = new modelcreerrecette();
+    $DataCreeRecette = $ICCreationRecette->CreeRecette();
     require('View/Frontend/EditionRecette.php');
 }
 //lance la page contact
@@ -106,6 +119,13 @@ function boutonretour()
     require('Model/Frontend/Retour.php'); 
     $ICRetour = new Retour();
     $DataRetour = $ICRetour->BoutonRetour();
-    require('View/Frontend/PageRecette.php');
+    require('View/Frontend/GestionUtilisateur.php');
+}
+function deconnection()
+{ 
+    require('Model/Frontend/Retour.php'); 
+   // $ICdeconnection = new Retour();
+   // $Datadeconnection = $ICdeconnection->deconnection();
+   // require('View/Frontend/GestionUtilisateur.php');
 }
 ?>

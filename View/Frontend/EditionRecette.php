@@ -1,18 +1,17 @@
 <?php $title = 'editionrecette' ; ?>
 <?php ob_start() ; ?>
-
-<section id="editionrecette">
-    <div id="recetteprevous">   
-        <div class="titrecette" id="previoustitrecette" >Titre de la recette</div>
-        <div class="lesingrédients" id="previouslesingrédients">Ingredients</div> 
-        <div class="larecette" id="previouslarecette">Recette</div>
+<section id="EditionRecette">
+    <div id="RecettePrevous">   
+        <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
+        <div class="LesIngrédients" id="PreviousLesIngrédients">Ingredients</div> 
+        <div class="LaRecette" id="PreviousLaRecette">Recette</div>
     </div>
-    <div class="edition">
-        <form action="#" method="post" id="creationrecette" >   
-            <label  class="titrerecette" for="titrerecette" >Titre de la recette</label>
-                <input  type="text" class="titrerecette" name="titrerecette" id="titrerecette" required onchange="changecontenutitre()">
+    <div class="Edition">
+        <form action="index.php?action=Creationrecette" method="post" id="CreationRecette" >   
+            <label  class="TitreRecette" for="TitreRecette" >Titre de la recette</label>
+                <input  type="text" class="TitreRecette" name="titrerecette" id="TitreRecette" required onchange="changecontenutitre()">
             <label for="difficulte">cette recette s'adresse à un :</label>
-                <select name="difficulte"  id="listedifficuter">
+                <select name="difficulte"  id="ListeDifficuter">
                 <option selected value="1">Débutant</option>
                 <option value="2">Intermédiaire</option>
                 <option value="3" >Confirmer</option>
@@ -27,6 +26,7 @@
                         <tr>
                         <td align="center"><label for="liste">Couleur du fond :</label>
                             <select name="liste" size="1" id="listeCouleur" onchange="changecouleur()">
+                            
                                 <option selected style="color:#ffff" value="#ffff">Blanc</option>
                                 <option style="color:#ffddbd" value="#ffddbd">Rouge</option>
                                 <option style="color:#c4f8d8" value="#c4f8d8">Vert</option>
@@ -40,15 +40,13 @@
                             </td>
                             </tr>
                     </table>
-            <button  type="submit" class="btn-submit" name="valider" id="valider"  onClick="ok()">VALIDER</button>
+            <button  type="submit" class="BoutonEnvoyer" name="valider" id="Valider"  onClick="ok()">VALIDER</button>
         </form>
     </div>
-
-
 </section>  
-
+</div>
 <?php $content = ob_get_clean() ; ?>
-<?php require('Template.php'); ?>
+<?php require('Templatebis.php'); ?>
                 <script language="javascript">
                     function changetaille() 
                         {

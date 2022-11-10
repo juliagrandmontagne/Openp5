@@ -21,16 +21,16 @@ class EspaceGestion
 
       if(isset($_GET['q']) AND !empty($_GET['q'])){
         ?>
-        <p>'alocooool'</p><?php
+        <p></p><?php
         $recherche = htmlspecialchars($_GET['q']);
         $reponse = $bdd->prepare('SELECT * FROM recette WHERE nomrecette LIKE"%'.$recherche.'%"ORDER BY ID DESC');
       }
 
       if(empty($reponse)){
         ?>
-        <p>'rezgrezgtrAucunerecette trouvée'</p><?php
+        <p></p><?php
       }else{?>
-        <p>'recette trouvée'</p><?php
+        <p></p><?php
         while($recette = $reponse->fetch()){
           ?>
           <p><?= $recette?></p>
@@ -44,7 +44,7 @@ class EspaceGestion
       <?php
         }
       }else{?>
-    <p>'Aucunerecette trouvée'</p><?php
+    <p></p><?php
       }
       $reponse->execute();
       return $reponse;
