@@ -62,15 +62,15 @@
                         }
                         function changecontenutitre() 
                         {
-                        document.getElementById('previoustitrecette').innerHTML = document.getElementById('titrerecette').value; 
+                        document.getElementById('PreviousTitRecette').innerHTML = document.getElementById('TitreRecette').value; 
                     }
                     function changecontenuingredients() 
                         {
-                        document.getElementById('previouslesingrédients').innerHTML = document.getElementById('Ingredients').value; 
+                        document.getElementById('PreviousLesIngrédients').innerHTML = document.getElementById('Ingredients').value; 
                     }
                     function changecontenurecette() 
                         {
-                        document.getElementById('previoustitrecette').innerHTML = document.getElementById('Recette').value; 
+                        document.getElementById('PreviousLaRecette').innerHTML = document.getElementById('Recette').value; 
                     }
                 </script> 
                 <?php
