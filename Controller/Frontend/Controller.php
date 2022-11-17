@@ -103,7 +103,7 @@ function CreerUtilisateur()
 { 
     require('Model/Backend/CreationUtilisateur.php'); 
     $ICCreationUtilisateur = new modelcreerutilisateur();
-    $DataCréeUtilisateur = $ICCreationUtilisateur->CreeUtilisateur();
+    $DataCreeUtilisateur = $ICCreationUtilisateur->CreeUtilisateur();
     require('View/Frontend/Inscription.php');
 }
 //lance la fonction qui redirige la presone sur sont compte (utilisateur ou administrateur)
@@ -128,4 +128,6 @@ function deconnection()
    // $Datadeconnection = $ICdeconnection->deconnection();
    // require('View/Frontend/GestionUtilisateur.php');
 }
+
+
 ?>

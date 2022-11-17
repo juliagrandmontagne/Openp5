@@ -36,16 +36,12 @@
                 <form action="index.php?action=SupressionRecette" method="post" class="ListeUtilisateur">
                   <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
                   <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" class="ListeUtilisateur"></i></button>
-                </form> 
-                <?php $identite=$donnees['ID']?>          
-                <form action="index.php?action=PageCreationEdition&id=<?php echo "$identite"?>" method="post" class="ListeUtilisateur">
+                </form>          
+                <form action="index.php?action=PageCreationEdition" method="post" class="ListeUtilisateur">
                   <input class="None" name="ID" value="<?php echo $donnees['ID']?>"> 
                   <button  type="submit" class="Icone"> <i class='fas fa-edit'class="Icone" ></i></button>
-                   
                 </form>
-                <form action="index.php?action=PageRecette&id=<?php echo "$identite"?>" method="post" class="ListeUtilisateur">
-                  <input class="None" name="ID" value="<?php echo $donnees['ID']?>"> 
-                  <button  type="submit" class="Icone" class='fa-solid fa-user'></button>
+
                 </form>
               </div>
            </div>

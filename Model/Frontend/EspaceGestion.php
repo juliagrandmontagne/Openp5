@@ -25,7 +25,6 @@ class EspaceGestion
         $recherche = htmlspecialchars($_GET['q']);
         $reponse = $bdd->prepare('SELECT * FROM recette WHERE nomrecette LIKE"%'.$recherche.'%"ORDER BY ID DESC');
       }
-
       if(empty($reponse)){
         ?>
         <p></p><?php
@@ -110,6 +109,6 @@ class EspaceGestion
       $reponse->execute();
       return $reponse;
       $rereponseq->cloreCursor();
-    }
+    }   
 }     
 ?>

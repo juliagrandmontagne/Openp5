@@ -113,13 +113,16 @@ margin: auto;
 margin-top: -500px;
 }
 /*pagesrecettes*/
-#Recette1 
+div#Recette1 
 {
 height: auto;
 display: grid;
 justify-content: center;
 margin: auto;
 padding: 60px;
+background-color: #ffffff;
+border-color: black;
+border-radius: 30px;
 }
 /*menu trie alcool*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -289,6 +292,11 @@ border-radius: 30px;
 display: grid;
 justify-content: center;
 color: #ffffff;
+width: 100%;
+}
+form#ConnexionUtilisateur {
+  display: grid;
+  justify-content: center;
 }
 #Chercher
 {
@@ -364,7 +372,7 @@ justify-content: space-evenly;
 margin-top: 100px;
 margin-left: auto;
 }
-.Recette1 
+#Recette1 
 {
 width: 75%;
 height: auto;
@@ -432,6 +440,10 @@ flex-wrap: wrap;
 justify-content: space-evenly;
 margin-top: 100px;
 margin-left: auto;
+}
+#laEditionRecette {
+  display: block;
+  flex-wrap: wrap;
 }
 .IconeActionRecette
 {
@@ -515,7 +527,7 @@ margin: 10px;
 .TitRecette 
 {
 justify-items: center;
-display: grid;
+/*display: grid;*/
 font-size: 20px;
 }
 textarea 

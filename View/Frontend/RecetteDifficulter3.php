@@ -16,7 +16,7 @@
     </aside>
 </section> 
 <section id="Pages"> 
-  <?php  foreach ($datarecetteconf as $donnees) : ?>
+  <?php  foreach ($DataRecetteConf as $donnees) : ?>
     <article class="EspaceRecettes">
       <div class='TitreCocktail'> 
       <h2><?php echo $donnees['nomrecette']?></h2>    
@@ -27,9 +27,10 @@
       </div>
       <?php $identite=$donnees['ID']?>
       <div class="Suite"><a class="SuiteLien" href="index.php?action=PageRecette&id=<?php echo "$identite"?>">lire la suite</a>
-      </div>   
+      </div>  <p>yooo</p> 
     </article>
   <?php endforeach; ?>
+  
 </section>
 <?php $content = ob_get_clean() ; ?>
 <?php require('Template.php'); ?>

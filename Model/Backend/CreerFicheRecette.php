@@ -5,9 +5,10 @@ class modelcreerrecette
   public function CreeRecette()
   {
     require('connexion.php');
-    $sth = $bdd->prepare('INSERT INTO recette ( Ingredients, nomrecette, Recette,	difficulte, couleur, IDUtilisateur, Images) VALUES(?, ?, ?, ?, ?, ?, ?)');
-    $sth->execute(array( "tot", "tot", "toto", "toto", "#ffff", "1","images"));  
-    header('Location:index.php?action=ProfilUtilisateur&id=1'); 
+    $name = $_FILES['file']['name'];
+    $sth = $bdd->prepare('INSERT INTO recette ( Ingredients, nomrecette, Recette, Images, IDUtilisateur, difficulte, couleur) VALUES(?, ?, ?, ?, ?, ?, ?)');
+    $sth->execute(array( htmlspecialchars($_POST['Ingredients']), htmlspecialchars($_POST['titrerecette']), htmlspecialchars($_POST['Recette']), "Images/$name",'1',htmlspecialchars($_POST['difficulte']), '#ffff'));
+    header('Location:index.php?action=ProfilUtilisateur&id=1');
   } 
 } 
 ?>

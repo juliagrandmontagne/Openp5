@@ -56,7 +56,7 @@ if (isset($_GET['action']))
     case'Creationrecette';
     EditionRecette();
     break;
-    //supression des
+    //supression des recette sur l'espace
     case'SupressionRecette';
     SupressionRecette();
     break;
@@ -75,6 +75,11 @@ if (isset($_GET['action']))
     case'SupressionProfilAdmin';
     SupressionProfilAdmin();
     break;
+    
+    case'CreerUtilisateur';
+    CreerUtilisateur();
+  break;
+
    }
 }
 else
