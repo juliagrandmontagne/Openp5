@@ -46,7 +46,7 @@
                         }
                     function changecouleur() 
                         {
-                        document.getElementById('recetteprevous').style.background = document.getElementById('listeCouleur').options[ document.getElementById('listeCouleur').selectedIndex ].value;
+                        document.getElementById('RecettePrevous').style.background = document.getElementById('listeCouleur').options[ document.getElementById('listeCouleur').selectedIndex ].value;
                         }
                     function ok() 
                         {
