@@ -1,12 +1,6 @@
 <?php $title = 'editionrecette' ; ?>
 <?php ob_start() ; ?>
-<section id="laEditionRecette">
-    <div id="RecettePrevous">   
-        <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
-        <div class="LesIngrédients" id="PreviousLesIngrédients">Ingredients</div> 
-        <div class="LaRecette" id="PreviousLaRecette">Recette</div>
-    </div>
-    <div class="Edition">
+<div class="Edition">
         <form action="index.php?action=Creationrecette" method="post" id="CreationRecette" >   
             <label  class="TitreRecette" for="TitreRecette" >Titre de la recette</label>
                 <input  type="text" class="TitreRecette" name="titrerecette" id="TitreRecette" required onchange="changecontenutitre()">
@@ -16,30 +10,30 @@
                 <option value="2">Intermédiaire</option>
                 <option value="3" >Confirmer</option>
                 </select>
+               
+                <input  name="idutilisateur" id="None" class="None" value="<?php echo $_GET['id']?>">
+ 
             <label class="Recette" for="Recette">Recette</label>
                 <textarea id="Recette" name="Recette" onchange="changecontenurecette()"></textarea>
             <label class="Ingredients" for="Ingredients">Ingrédients</label>
                 <textarea id="Ingredients" name="Ingredients" onchange="changecontenuingredients()"></textarea>
             <label for="file">Image</label>
                 <input type="file" name="file" id="file">
-                    <table align="center">
-                        <tr>
-                        <td align="center"><label for="liste">Couleur du fond :</label>
+                  <td align="center"><label for="liste">Couleur du fond :</label>
                             <select name="liste" size="1" id="listeCouleur" onchange="changecouleur()">
-                            
-                                <option value="#ffff" >Blanc</option>
+                                <option value="#ffffff" >blanc</option>
                                 <option value="#ffddbd">Rouge</option>
                             </select>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td height="40" align="center">
-                            </td>
-                            </tr>
-                    </table>
             <button  type="submit" class="BoutonEnvoyer" name="valider" id="Valider"  onClick="ok()">VALIDER</button>
         </form>
     </div>
+<section id="laEditionRecette">
+    <div id="RecettePrevous">   
+        <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
+        <div class="LesIngrédients" id="PreviousLesIngrédients">Ingredients</div> 
+        <div class="LaRecette" id="PreviousLaRecette">Recette</div>
+    </div>
+  
 </section>  
 </div>
 <?php $content = ob_get_clean() ; ?>

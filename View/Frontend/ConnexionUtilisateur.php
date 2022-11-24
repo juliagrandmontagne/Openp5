@@ -3,6 +3,7 @@
 <section id="main">
     <div class="Carré">
         <p class="titreconnection">Bonjour, vous souhaitez vous connecter pour gerer vos recettes ?</p>
+        
             <form action="index.php?action=SignIn" method="post" id="connexionutilisateur" >  
                 <div id="formulairedeconnection"></div>
                     <input id="ChampNomUtilisateur" name="nameuser" placeholder="pseudo">
@@ -24,6 +25,7 @@
                 {
                 session_start();
                 $_SESSION["connecter"] = "1";
+                $_SESSION["id"] = $IdBDD;
                 echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
                 }
                 elseif($data['Administrateur'] == 1)

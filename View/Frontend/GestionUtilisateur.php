@@ -1,11 +1,12 @@
 <?php $title = 'compteutilisateur' ; ?>
 <?php ob_start() ; ?>
   <section id="ConteneurPrincipal">
-    <form action="index.php?action=PageCreationEdition" method="post">
-      <div class="Ajout">
-        <button  type="submit" class="Boutton"><p class="Ajout">ajouter une recette</p></button>
-      </div>
-    </form> 
+
+  <nav class="EspaceUtilisateur">
+                     <ul class="Ajout">
+                        <li class="MenuConnexion"><a class="BoutonConnexion"href="index.php?action=PageCreationEdition&id=<?php echo $_SESSION["id"]?>">ajouter une recette</a></li>
+                    </ul>
+            </nav>
     <div class="CarreGestionRecette">
       <div class="Recherche">
         <form action="index.php?action=Searchbar" method="GET">
