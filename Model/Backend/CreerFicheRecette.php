@@ -6,10 +6,12 @@ class modelcreerrecette
   {
     require('connexion.php');
     $name = $_FILES['file']['name'];
-    $id= $IdBDD
+
     $sth = $bdd->prepare('INSERT INTO recette ( Ingredients, nomrecette, Recette, Images, IDUtilisateur, difficulte, couleur) VALUES(?, ?, ?, ?, ?, ?, ?)');
     $sth->execute(array( htmlspecialchars($_POST['Ingredients']), htmlspecialchars($_POST['titrerecette']), htmlspecialchars($_POST['Recette']), "Images/$name",htmlspecialchars($_POST['idutilisateur']),htmlspecialchars($_POST['difficulte']), '#ffff'));
-    header('Location:index.php?action=ProfilUtilisateur&id=1');
+    session_start();
+    $_SESSION["id"] = $IdBDD;
+    echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
   } 
 } 
 ?>
