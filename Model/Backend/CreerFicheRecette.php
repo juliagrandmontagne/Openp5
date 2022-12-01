@@ -10,7 +10,7 @@ class modelcreerrecette
     $sth = $bdd->prepare('INSERT INTO recette ( Ingredients, nomrecette, Recette, Images, IDUtilisateur, difficulte, couleur) VALUES(?, ?, ?, ?, ?, ?, ?)');
     $sth->execute(array( htmlspecialchars($_POST['Ingredients']), htmlspecialchars($_POST['titrerecette']), htmlspecialchars($_POST['Recette']), "Images/$name",htmlspecialchars($_POST['idutilisateur']),htmlspecialchars($_POST['difficulte']), '#ffff'));
     session_start();
-    $_SESSION["id"] = $IdBDD;
+    $IdBDD = $_SESSION["id"];;
     echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
   } 
 } 

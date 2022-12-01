@@ -12,7 +12,7 @@
         <div class="ElementRecette">
         <p class="ElementAdmin"><?php echo $donnees['PseudoUtilisateur']?></p>
         <form action="index.php?action=SupressionProfilAdmin" method="post" class="ListeUtilisateur">
-          <input class="None" name="ID" value="<?php echo $donnees['IDUtilisateur']?>">
+          <input class="None" name="IDUtilisateur" value="<?php echo $donnees['IDUtilisateur']?>">
           <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" class="ListeUtilisateur"></i></button>
         </form> 
         </div>

@@ -10,7 +10,7 @@ function SupressionProfilAdmin ()
 { 
     require('Model/Backend/EspaceGestionBack.php'); 
     $ICSupRecetteAdmin = new EspaceGestionBack();
-    $DataSupRecetteAdmin = $ICSupRecette->SupressionProfilAdmin();
+    $DataSupRecetteAdmin = $ICSupRecetteAdmin->SupressionProfilAdmin();
     require('View/Frontend/CompteModerateur.php');
 }
 function SupressionRecetteAdmin ()
@@ -20,4 +20,19 @@ function SupressionRecetteAdmin ()
      $DataSupprofil = $ICSupprofil->SupressionRecetteAdmin();
      require('View/Frontend/CompteModerateur.php');
  }
+ function  ModifierRecette()
+ { 
+    require('Model/Backend/EspaceGestionBack.php'); 
+    $ICModifierRecette = new EspaceGestionBack();
+    $DataRecette = $ICModifierRecette->ModifierRecette();
+    require('View/Frontend/ModifierRecette.php');
+}
+function  AfficherRecette()
+{ 
+    require('Model/Backend/EspaceGestionBack.php'); 
+    $ICAfficherRecette= new EspaceGestionBack();
+    $DataAfficherRecette = $ICAfficherRecette->AfficherRecette();
+    require('View/Frontend/ModifierRecette.php');
+}
+
 ?>

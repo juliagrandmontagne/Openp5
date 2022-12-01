@@ -23,7 +23,7 @@
       </div>     
       <div class="Recette">
         <?php echo $donnees['Recette']?> <br>
-        <img src="<?php echo $donnees['image']?>" alt="IllustrationCoktail" class="IllustrationCoktail"> 
+        <img src="<?php echo $donnees['Images']?>" alt="IllustrationCoktail" class="IllustrationCoktail"> 
       </div>
       <?php $identite=$donnees['ID']?>
       <div class="Suite"><a class="SuiteLien" href="index.php?action=PageRecette&id=<?php echo "$identite"?>">lire la suite</a>

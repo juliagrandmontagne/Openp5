@@ -6,7 +6,7 @@ try
     $bdd=new PDO('mysql:host=localhost;dbname=projet5;charset=utf8', 'root', 'root') ;
     //online
     //
-    //$bdd=new PDO('mysql:host=db5006311013.hosting-data.io;dbname=dbs5268898;charset=utf8', 'dbu402848', 'ceciestunmotdepasse!') ;
+//$bdd=new PDO('mysql:host=db5010962148.hosting-data.io;dbname=dbs9266989;charset=utf8', 'dbu4459812' , 'Lemopdetoutencanon!') ;
   }
 catch (PDOException $e) 
   {

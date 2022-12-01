@@ -1,5 +1,6 @@
 <?php $title = 'editionrecette' ; ?>
 <?php ob_start() ; ?>
+
 <div class="Edition">
         <form action="index.php?action=Creationrecette" method="post" id="CreationRecette" >   
             <label  class="TitreRecette" for="TitreRecette" >Titre de la recette</label>
@@ -20,54 +21,12 @@
             <label for="file">Image</label>
                 <input type="file" name="file" id="file">
                   <td align="center"><label for="liste">Couleur du fond :</label>
-                            <select name="liste" size="1" id="listeCouleur" onchange="changecouleur()">
-                                <option value="#ffffff" >blanc</option>
-                                <option value="#ffddbd">Rouge</option>
+                            <select name="selectCouleur" id="selectCouleur" onchange="changecouleur()">
+                                <option value="" >seclectionner votre couleur</option>
                             </select>
             <button  type="submit" class="BoutonEnvoyer" name="valider" id="Valider"  onClick="ok()">VALIDER</button>
         </form>
-    </div>
-<section id="laEditionRecette">
-    <div id="RecettePrevous">   
-        <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
-        <div class="LesIngrédients" id="PreviousLesIngrédients">Ingredients</div> 
-        <div class="LaRecette" id="PreviousLaRecette">Recette</div>
-    </div>
-  
-</section>  
-</div>
-<?php $content = ob_get_clean() ; ?>
-<?php require('Templatebis.php'); ?>
-
-                <script language="javascript">
-                    function changetaille() 
-                        {
-                        document.getElementById('titre').style.fontSize = document.getElementById('listeTaille').options[ document.getElementById('listeTaille').selectedIndex ].text+'px';
-                        }
-                    function changecouleur() 
-                        {
-                        document.getElementById('RecettePrevous').style.background = document.getElementById('listeCouleur').options[ document.getElementById('listeCouleur').selectedIndex ].value;
-                        }
-                    function ok() 
-                        {
-                        localStorage.setItem('option2', document.getElementById('listeCouleur').selectedIndex);
-                        localStorage.setItem('option1', document.getElementById('listeTaille').selectedIndex);
-
-                        }
-                        function changecontenutitre() 
-                        {
-                        document.getElementById('PreviousTitRecette').innerHTML = document.getElementById('TitreRecette').value; 
-                    }
-                    function changecontenuingredients() 
-                        {
-                        document.getElementById('PreviousLesIngrédients').innerHTML = document.getElementById('Ingredients').value; 
-                    }
-                    function changecontenurecette() 
-                        {
-                        document.getElementById('PreviousLaRecette').innerHTML = document.getElementById('Recette').value; 
-                    }
-                </script> 
-                <?php
+        <?php
 if(isset($_FILES['file'])){
   $tmpName = $_FILES['file']['tmp_name'];
   $name = $_FILES['file']['name'];
@@ -87,3 +46,18 @@ else{
     echo "Mauvaise extension";
 }
 ?>
+    </div>
+<section id="laEditionRecette">
+    <div id="RecettePrevous">   
+        <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
+        <div class="LesIngrédients" id="PreviousLesIngrédients">Ingredients</div> 
+        <div class="LaRecette" id="PreviousLaRecette">Recette</div>
+    </div>
+  
+</section>  
+</div> 
+          
+<?php $content = ob_get_clean() ; ?>
+<?php require('Templatebis.php'); ?>
+
+   
