@@ -45,12 +45,12 @@ class EspaceGestionBack
     public function ModifierRecette() 
     {
       require('Connexion.php');
-      //$reponse = $bdd->prepare('UPDATE recette SET  chapitrenumber=?, nomrecette=?, Recette=?,brouillon=? ,Images=? ,difficulte=? ,couleur=? WHERE ID=?');
-      //$reponse->execute(array(, htmlspecialchars($_POST['Ingredients']), htmlspecialchars($_POST['titrerecette']), htmlspecialchars($_POST['Recette']), "Images/$name",htmlspecialchars($_POST['idutilisateur']),htmlspecialchars($_POST['difficulte']), '#ffff',htmlspecialchars($_POST['ID'])));
-      //return $reponse; 
-      //$rereponseq->cloreCursor();
+      $reponse = $bdd->prepare('UPDATE recette SET  Ingredients, nomrecette, Recette, Images, difficulte, couleur WHERE ID=?');
+      $reponse->execute(array( htmlspecialchars($_POST['Ingredients']), htmlspecialchars($_POST['titrerecette']), htmlspecialchars($_POST['Recette']), "Images/$name",htmlspecialchars($_POST['difficulte']), '#ffff',htmlspecialchars($_POST['ID'])));
+      return $reponse; 
+      $rereponseq->cloreCursor();
       //$IdBDD = $_SESSION["id"];
-      //echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
+      //echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=1');</script>";
       //echo "<script type='text/javascript'>document.location.replace('index.php?action=PageAdministration');</script>";
       //header('Location:index.php?action=ProfilUtilisateur&id=1');
       //print("coucou");

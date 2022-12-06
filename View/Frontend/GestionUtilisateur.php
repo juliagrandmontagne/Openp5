@@ -4,7 +4,7 @@
 
   <nav class="EspaceUtilisateur">
                      <ul class="Ajout">
-                        <li class="MenuConnexion"><a class="BoutonConnexion"href="index.php?action=PageCreationEdition&id=<?php echo $_SESSION["id"]?>">ajouter une recette</a></li>
+                        <li class="MenuConnexion"><a class="Bouton" href="index.php?action=PageCreationEdition&id=<?php echo $_SESSION["id"]?>">ajouter une recette</a></li>
                     </ul>
             </nav>
     <div class="CarreGestionRecette">
@@ -12,7 +12,7 @@
         <form action="index.php?action=Searchbar" method="GET">
           <label for="SiteSearch"></label>
           <input type="Search" id="SiteSearch" name="q" placeholder="recherche">
-          <input type="submit" name="chercher">
+          <input type="submit" name="chercher" class="BoutonEnvoyersarch">
         </form>  
       </div>
         <div class="Liste">
@@ -37,13 +37,12 @@
                 <form action="index.php?action=SupressionRecette" method="post" class="ListeUtilisateur">
                   <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
                   <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" class="ListeUtilisateur"></i></button>
-                </form>          
-
-                <nav class="EspaceUtilisateure">
-                     <ul class="affiche">
-                     <?php $id?>=<?php echo $donnees['ID']?>
-                        <li class="MenuConnexion"><a class="BoutonConnexion"href="index.php?action=AfficherRecette&id=<?php echo $id?>"><i class='fas fa-edit'class="Icone" ></i></a></li>
-                    </ul>
+                </form>  
+                <div Class="None"><?php $id?>=<?php echo $donnees['ID']?></div>
+                     <form action="index.php?action=AfficherRecette&id=<?php echo $donnees['ID']?>" method="post" class="ListeUtilisateur">
+                  <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
+                  <button  type="submit" class="Icone"><i class='fas fa-edit'class="Icone" ></i></button>
+                </form>  
             </nav>
                 </form>
               </div>

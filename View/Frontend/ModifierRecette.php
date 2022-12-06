@@ -11,7 +11,7 @@
                     <option value="2">Intermédiaire</option>
                     <option value="3" >Confirmer</option>
                     </select>
-    
+                    <input  name="idutilisateur" id="Non" class="None" value="<?php echo $_GET['id']?>">
                 <label class="Recette" for="Recette">Recette</label>
                     <textarea id="Recette" name="Recette" onchange="changecontenurecette()"><?php echo $donnees['Recette']?></textarea>
                 <label class="Ingredients" for="Ingredients">Ingrédients</label>

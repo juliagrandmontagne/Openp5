@@ -53,7 +53,7 @@ function Searchbar()
 { 
     require('Model/Frontend/EspaceGestion.php'); 
     $ICsearch = new EspaceGestion();
-    //$DataUtilisateurperso = $ICsearch-> Searchbar();
+    $DataUtilisateurperso = $ICsearch-> Searchbar();
     require('View/Frontend/GestionUtilisateur.php');
    // require('View/Frontend/Headerbis.php')
 }

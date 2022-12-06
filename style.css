@@ -88,13 +88,55 @@ float: left;
 display: flex;
 position: relative;
 }
-a.BoutonConnexion 
+a.BoutonConnexion {
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 0px;
+  text-decoration: none;
+  font-family: Quintessential-Regular;
+  font-size: 1.3em;
+  width: 99px;
+  margin: auto;
+  justify-content: center;
+align-content: center;
+display: grid;
+}
+.Bouton
 {
 background-color: green;
 color: white;
 border-radius: 10px;
 padding: 5px;
 margin-top: 0px;
+text-decoration: none;
+font-family: Quintessential-Regular;
+font-size: 1.3em;
+
+}
+.BoutonEnvoyersarch {
+  width: 90px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 30px;
+  text-decoration: none;
+  font-family: Quintessential-Regular;
+  font-size: 1.3em;
+  float: right;
+}
+.envoyer {
+  width: 100px;
+  background-color: green;
+  border: 0px;
+  color: white;
+  border-radius: 30px;
+  font-family: Quintessential-Regular;
+  font-size: 1.3em;
+  border-radius: 10px;
+  padding: 5px;
 }
 /*slider*/
 #Slider 
@@ -553,10 +595,11 @@ margin: 0px;
 }
 #SiteSearch 
 {
-margin-top: 30px;
-display: block;
-width: 70%;
-margin-left: 20px;
+  margin-top: 30px;
+  display: block;
+  width: 300px;
+  margin-left: 20px;
+  float: left;  
 }
 #PreviousTitRecette 
 {
@@ -717,6 +760,13 @@ top: 40px;
     margin-top: 0px;
     width: 90%;
   }
+  img#Logo {
+    width: 50px;
+    margin-top: -0px;
+    display: block;
+    position: absolute;
+    top: 0px;
+  }
 }
 @media screen and (max-width: 556px)
 {
@@ -741,8 +791,8 @@ top: 40px;
   }
   .Carré 
   {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
   }
 }

@@ -12,7 +12,7 @@
                 <option value="3" >Confirmer</option>
                 </select>
                
-                <input  name="idutilisateur" id="None" class="None" value="<?php echo $_GET['id']?>">
+
  
             <label class="Recette" for="Recette">Recette</label>
                 <textarea id="Recette" name="Recette" onchange="changecontenurecette()"></textarea>
