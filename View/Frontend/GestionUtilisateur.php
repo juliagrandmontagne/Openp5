@@ -9,10 +9,11 @@
             </nav>
     <div class="CarreGestionRecette">
       <div class="Recherche">
-        <form action="index.php?action=Searchbar" method="post">
+        <form action="index.php?action=Searchbar" method="GET">
           <label for="SiteSearch"></label>
           <input type="Search" id="SiteSearch" name="q" placeholder="recherche">
-          <input type="submit" name="chercher" class="BoutonEnvoyersarch">
+          <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
+          <button type="submit" name="chercher" class="BoutonEnvoyersarch">rechercher</button>
         </form>  
       </div>
         <div class="Liste">

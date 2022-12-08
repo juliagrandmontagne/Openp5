@@ -26,12 +26,12 @@ class EspaceGestion
     {
       session_start();
       require('Connexion.php');
-      if(isset($_GET['q']) AND !empty($_GET['q'])){
-        ?>
-        <p>'alocooool'</p><?php
-        $recherche = htmlspecialchars($_GET['q']);
-        $reponse = $bdd->prepare('SELECT * FROM recette WHERE  nomrecette LIKE"%'.$recherche.'%"AND IDUtilisateur =' . $_SESSION['utilisateur']);
-      }
+    //  if(isset($_GET['q']) AND !empty($_GET['q'])){
+      //  ?/>
+       // <//p>'alocooool'<///p><?php
+        //$recherche = htmlspecialchars($_GET['q']);
+        $reponse = $bdd->prepare('SELECT * FROM recette WHERE nomrecette="Mojito" AND IDUtilisateur=1');
+     // }
 
     }
     public function Entete()
