@@ -671,10 +671,7 @@ margin-bottom: 10px;
 }
 @media screen and (max-width: 1300px)
 {
-  .Edition
-  {
-  width: 50%;
-  }
+
   #Recetteprevous
   {
     width: 49%;
