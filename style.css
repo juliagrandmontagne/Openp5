@@ -32,7 +32,7 @@ height: 100%;
 }
 div#Contenaire 
 {
-max-width: 1300px;
+
 margin: auto;
 }
 /*MENU NAVIGUATION PRINCIPAL */
@@ -461,7 +461,7 @@ width: 100%;
 /*editionrecette*/
 #RecettePrevous 
 {
-width: 100%;
+  width: 97%;
 height: 742px;
 border-width: 1px;
 border-style: solid;
@@ -471,7 +471,7 @@ padding: 20px;
 }
 .Edition 
 {
-width: 100%;
+  width: 97%;
 height: 700px;
 border-width: 1px;
 border-style: solid;
@@ -746,6 +746,13 @@ top: 40px;
   margin-left: 50px;
   }
 }
+@media screen and (min-width: 1300px)
+{
+  div#Contenaire {
+    max-width: 1300px;
+    margin: auto;
+  }
+}
 @media screen and (max-width: 740px)
 {
   .GestionAdministratifRecette 
@@ -767,18 +774,22 @@ top: 40px;
     position: absolute;
     top: 0px;
   }
+  #RecettePrevous {
+    width: 90%;
+    margin: 0px;
+  }
 }
 @media screen and (max-width: 556px)
 {
   .Edition 
   {
-  width: 100%;
-  margin:0px;
+  width: 80%;
+  margin:10px;
   }
   #RecettePrevous 
   {
-  width: 100%;
-  margin:0px;
+  width: 80%;
+  margin:10px;
   }
   .elementRecette 
   {
@@ -794,5 +805,15 @@ top: 40px;
     width: 90%;
     margin: auto;
     padding: 10px;
+  }
+  #SiteSearch {
+    margin-top: 30px;
+    display: block;
+    width: 200px;
+    margin-left: 20px;
+    float: left;
+  }
+  .CarreGestionRecette {
+    width: 90%;
   }
 }

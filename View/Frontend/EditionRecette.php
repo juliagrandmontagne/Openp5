@@ -7,26 +7,35 @@
                 <input  type="text" class="TitreRecette" name="titrerecette" id="TitreRecette" required onchange="changecontenutitre()">
             <label for="difficulte">cette recette s'adresse à un :</label>
                 <select name="difficulte"  id="ListeDifficuter">
-                <option selected value="1">Débutant</option>
-                <option value="2">Intermédiaire</option>
-                <option value="3" >Confirmer</option>
-                </select>
-               
-
- 
+                    <option selected value="1">Débutant</option>
+                    <option value="2">Intermédiaire</option>
+                    <option value="3" >Confirmer</option>
+                </select> 
+            <input  name="idutilisateur" id="None" class="None" value="<?php echo $_GET['id']?>">
             <label class="Recette" for="Recette">Recette</label>
                 <textarea id="Recette" name="Recette" onchange="changecontenurecette()"></textarea>
             <label class="Ingredients" for="Ingredients">Ingrédients</label>
                 <textarea id="Ingredients" name="Ingredients" onchange="changecontenuingredients()"></textarea>
             <label for="file">Image</label>
                 <input type="file" name="file" id="file">
-                  <td align="center"><label for="liste">Couleur du fond :</label>
-                            <select name="selectCouleur" id="selectCouleur" onchange="changecouleur()">
-                                <option value="" >seclectionner votre couleur</option>
-                            </select>
+             <label for="liste">Couleur du fond :</label>
+                <select name="selectCouleur" id="selectCouleur" onchange="changecouleur()">
+                <option value="" >seclectionner votre couleur</option>
+                </select>
             <button  type="submit" class="BoutonEnvoyer" name="valider" id="Valider"  onClick="ok()">VALIDER</button>
         </form>
-        <?php
+     
+    </div>
+<section id="laEditionRecette">
+    <div id="RecettePrevous">   
+        <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
+        <div class="LesIngrédients" id="PreviousLesIngrédients">Ingredients</div> 
+        <div class="LaRecette" id="PreviousLaRecette">Recette</div>
+    </div>
+  
+</section>  
+</div> 
+<?php
 if(isset($_FILES['file'])){
   $tmpName = $_FILES['file']['tmp_name'];
   $name = $_FILES['file']['name'];
@@ -40,24 +49,15 @@ $extension = strtolower(end($tabExtension));
 //Tableau des extensions que l'on accepte
 $extensions = ['jpg', 'png', 'jpeg', 'gif'];
 if(in_array($extension, $extensions)){
-    move_uploaded_file($tmpName, './upload/'.$name);
+    move_uploaded_file($tmpName, './Images/'.$name);
 }
 else{
     echo "Mauvaise extension";
 }
 ?>
-    </div>
-<section id="laEditionRecette">
-    <div id="RecettePrevous">   
-        <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
-        <div class="LesIngrédients" id="PreviousLesIngrédients">Ingredients</div> 
-        <div class="LaRecette" id="PreviousLaRecette">Recette</div>
-    </div>
-  
-</section>  
-</div> 
-          
 <?php $content = ob_get_clean() ; ?>
 <?php require('Templatebis.php'); ?>
+
+
 
    

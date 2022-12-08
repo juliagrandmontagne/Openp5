@@ -9,7 +9,7 @@
             </nav>
     <div class="CarreGestionRecette">
       <div class="Recherche">
-        <form action="index.php?action=Searchbar" method="GET">
+        <form action="index.php?action=Searchbar" method="post">
           <label for="SiteSearch"></label>
           <input type="Search" id="SiteSearch" name="q" placeholder="recherche">
           <input type="submit" name="chercher" class="BoutonEnvoyersarch">
@@ -36,6 +36,7 @@
               <div class="IconeActionRecette">
                 <form action="index.php?action=SupressionRecette" method="post" class="ListeUtilisateur">
                   <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
+                  
                   <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" class="ListeUtilisateur"></i></button>
                 </form>  
                 <div Class="None"><?php $id?>=<?php echo $donnees['ID']?></div>
