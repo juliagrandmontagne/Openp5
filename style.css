@@ -601,6 +601,11 @@ margin: 0px;
   margin-left: 20px;
   float: left;  
 }
+#selectCouleur {
+
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
 #PreviousTitRecette 
 {
 margin-top: 50px;
