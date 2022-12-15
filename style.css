@@ -672,10 +672,6 @@ margin-bottom: 10px;
 @media screen and (max-width: 1300px)
 {
 
-  #Recetteprevous
-  {
-    width: 49%;
-  }
 }
 @media screen and (max-width: 929px)
 {
@@ -783,6 +779,26 @@ top: 40px;
 }
 @media screen and (max-width: 556px)
 {
+  .ClassementRecette {
+    margin-top: -20px;
+
+    display: block;
+  }
+  .TitreRecetteUtilisateur {
+    display: inline-grid;
+
+  }
+  .ElementRecette {
+    display: inline-grid;
+    flex-wrap: wrap;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+    margin: auto;
+    height: 180px;
+    width: 100%;
+    justify-content: center;
+  }
   .Edition 
   {
   width: 80%;
@@ -811,11 +827,17 @@ top: 40px;
   #SiteSearch {
     margin-top: 30px;
     display: block;
-    width: 200px;
+    width: 150px;
     margin-left: 20px;
     float: left;
   }
   .CarreGestionRecette {
     width: 90%;
+  }
+  .IconeActionRecette {
+    display: flex;
+    flex-wrap: wrap;
+    height: 20px;
+    margin-left: -40px;
   }
 }
