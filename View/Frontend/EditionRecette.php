@@ -1,6 +1,12 @@
 <?php $title = 'editionrecette' ; ?>
 <?php ob_start() ; ?>
+<?php session_start();?>
 
+<nav class="nav" >
+        <ul>
+          <li><a class="oh" href="index.php?action=ProfilUtilisateur&id=<?php echo $_SESSION["id"]?>">Retour</a></li></br>
+        </ul>
+        </nav>
 <div class="Edition">
         <form action="index.php?action=Creationrecette" method="post" id="CreationRecette" >   
             <label  class="TitreRecette" for="TitreRecette" >Titre de la recette</label>

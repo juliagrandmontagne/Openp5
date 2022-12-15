@@ -576,7 +576,7 @@ margin: 10px;
 .TitRecette 
 {
 justify-items: center;
-/*display: grid;*/
+display: grid;
 font-size: 20px;
 }
 textarea 
