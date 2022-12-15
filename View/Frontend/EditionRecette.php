@@ -1,7 +1,6 @@
 <?php $title = 'editionrecette' ; ?>
 <?php ob_start() ; ?>
 <?php session_start();?>
-
 <nav class="nav" >
         <ul>
           <li><a class="oh" href="index.php?action=ProfilUtilisateur&id=<?php echo $_SESSION["id"]?>">Retour</a></li></br>
@@ -48,18 +47,17 @@ if(isset($_FILES['file'])){
   $size = $_FILES['file']['size'];
   $error = $_FILES['file']['error'];
 }
-move_uploaded_file($tmpName, './Images/'.$name);
-$tabExtension = explode('.', $name);
-$extension = strtolower(end($tabExtension));
-//$_SESSION['$name'] = $name;
+move_uploaded_file($tmpName, './upload/'.$name);
+//$tabExtension = explode('.', $name);
+//$extension = strtolower(end($tabExtension));
 //Tableau des extensions que l'on accepte
-$extensions = ['jpg', 'png', 'jpeg', 'gif'];
-if(in_array($extension, $extensions)){
-    move_uploaded_file($tmpName, './Images/'.$name);
-}
-else{
-    echo "Mauvaise extension";
-}
+//$extensions = ['jpg', 'png', 'jpeg', 'gif'];
+//if(in_array($extension, $extensions)){
+ //   move_uploaded_file($tmpName, './Images/'.$name);
+//}
+//else{
+//    echo "Mauvaise extension";
+//}
 ?>
 <?php $content = ob_get_clean() ; ?>
 <?php require('Templatebis.php'); ?>
