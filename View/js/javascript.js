@@ -11,8 +11,14 @@ function couleur()
             selectCouleur.appendChild(choixCouleur) // Définir l'option comme étant l'enfant de Select 
         });
     }
+    function background() {
+        document.getElementById('Recette1').style.background = "<?php  foreach ($DataPagerecette as $donnees) : ?><?php echo $donnees['couleur']?><?php endforeach; ?>";
+    };
 // Appel de la fonction
 couleur();
+
+background();
+
 
 
 

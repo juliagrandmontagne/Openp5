@@ -7,7 +7,7 @@
             <form action="index.php?action=SignIn" method="post" id="connexionutilisateur" >  
                 <div id="formulairedeconnection"></div>
                     <input id="ChampNomUtilisateur" name="nameuser" placeholder="pseudo">
-                    <input id="MotDePasse" type="pasword" name="mp" placeholder="mot de passe">
+                    <input id="MotDePasse" type="password" name="mp" placeholder="mot de passe">
                 <button  type="submit" class="BoutonEnvoyer" name="valider">Envoyer</button>  
                     <p>mot de passe oublier?</p>
                     <p>vous n'etes pas inscrit?</p>           

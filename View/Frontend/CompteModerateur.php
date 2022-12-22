@@ -3,8 +3,8 @@
 <section id="Admin">
   <div class="GestionAdministratifUilisateur">
       <div class="Recherche">
-        <label for="SiteSearch"></label>
-        <input type="search" id="SiteSearch" name="q">
+        <label for="SiteSearchProfil"></label>
+        <input type="search" id="SiteSearchProfil" name="q">
         <button>chercher</button>
       </div>
       <div class="Liste"></div>
@@ -13,7 +13,7 @@
         <p class="ElementAdmin"><?php echo $donnees['PseudoUtilisateur']?></p>
         <form action="index.php?action=SupressionProfilAdmin" method="post" class="ListeUtilisateur">
           <input class="None" name="IDUtilisateur" value="<?php echo $donnees['IDUtilisateur']?>">
-          <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" class="ListeUtilisateur"></i></button>
+          <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" ></i></button>
         </form> 
         </div>
         <?php endforeach?>
@@ -30,7 +30,7 @@
          <p class="ElementAdmin"><?php echo $donnees['nomrecette']?></p>
          <form action="index.php?action=SupressionRecetteAdmin" method="post" class="ListeUtilisateur">
             <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
-            <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" class="ListeUtilisateur"></i></button>
+            <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" ></i></button>
           </form>  
           </div>          
         <?php endforeach?>

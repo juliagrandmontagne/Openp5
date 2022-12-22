@@ -589,11 +589,19 @@ height: 100px;
 padding: 10px;
 margin-left: -10px;
 }
-#Difficulte 
+#selectCouleur
 {
 margin: 0px;
 }
 #SiteSearch 
+{
+  margin-top: 30px;
+  display: block;
+  width: 300px;
+  margin-left: 20px;
+  float: left;  
+}
+#SiteSearchProfil 
 {
   margin-top: 30px;
   display: block;
@@ -661,7 +669,7 @@ font-size: 30px;
 font-family: Merienda-Regular;
 margin-top: 100px;
 }
-#ListeDifficuter 
+#selectCouleur
 {
 display: block;
 justify-items: center;

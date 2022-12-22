@@ -1,16 +1,16 @@
 <?php $title = 'editionrecette' ; ?>
 <?php ob_start() ; ?>
 <?php session_start();?>
-<nav class="nav" >
+<nav class="espaceUtilisateur">
         <ul>
-          <li><a class="oh" href="index.php?action=ProfilUtilisateur&id=<?php echo $_SESSION["id"]?>">Retour</a></li></br>
+          <li class="MenuConnexion"><a class="BoutonConnexion" href="index.php?action=ProfilUtilisateur&id=<?php echo $_SESSION["id"]?>">Retour</a></li>
         </ul>
-        </nav>
+</nav>
 <div class="Edition">
         <form action="index.php?action=Creationrecette" method="post" id="CreationRecette" >   
             <label  class="TitreRecette" for="TitreRecette" >Titre de la recette</label>
                 <input  type="text" class="TitreRecette" name="titrerecette" id="TitreRecette" required onchange="changecontenutitre()">
-            <label for="difficulte">cette recette s'adresse à un :</label>
+            <label for="ListeDifficuter">cette recette s'adresse à un :</label>
                 <select name="difficulte"  id="ListeDifficuter">
                     <option selected value="1">Débutant</option>
                     <option value="2">Intermédiaire</option>
@@ -23,7 +23,7 @@
                 <textarea id="Ingredients" name="Ingredients" onchange="changecontenuingredients()"></textarea>
             <label for="file">Image</label>
                 <input type="file" name="file" id="file">
-             <label for="liste">Couleur du fond :</label>
+             <label for="selectCouleur">Couleur du fond :</label>
                 <select name="selectCouleur" id="selectCouleur" onchange="changecouleur()">
                 <option value="" >seclectionner votre couleur</option>
                 </select>
@@ -33,13 +33,12 @@
     </div>
 <section id="laEditionRecette">
     <div id="RecettePrevous">   
-        <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
+        <div class="TitRecette" id="PreviousTitRecette">Titre de la recette</div>
         <div class="LesIngrédients" id="PreviousLesIngrédients">Ingredients</div> 
         <div class="LaRecette" id="PreviousLaRecette">Recette</div>
     </div>
   
 </section>  
-</div> 
 <?php
 if(isset($_FILES['file'])){
   $tmpName = $_FILES['file']['tmp_name'];

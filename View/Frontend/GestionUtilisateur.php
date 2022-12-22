@@ -37,16 +37,14 @@
               <div class="IconeActionRecette">
                 <form action="index.php?action=SupressionRecette" method="post" class="ListeUtilisateur">
                   <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
-                  
-                  <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" class="ListeUtilisateur"></i></button>
+                  <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" ></i></button>
                 </form>  
-                <div Class="None"><?php $id?>=<?php echo $donnees['ID']?></div>
-                     <form action="index.php?action=AfficherRecette&id=<?php echo $donnees['ID']?>" method="post" class="ListeUtilisateur">
+                <div class="None"><?php $id?>=<?php echo $donnees['ID']?></div>
+                <form action="index.php?action=AfficherRecette&id=<?php echo $donnees['ID']?>" method="post" class="ListeUtilisateur">
                   <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
-                  <button  type="submit" class="Icone"><i class='fas fa-edit'class="Icone" ></i></button>
+                  <button  type="submit" class="Icone"><i class='fas fa-edit' ></i></button>
                 </form>  
-            </nav>
-                </form>
+
               </div>
            </div>
           <?php endforeach;?>

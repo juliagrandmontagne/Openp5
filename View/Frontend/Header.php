@@ -2,8 +2,8 @@
     <section id="menuheader"> 
               <nav class="espaceUtilisateur">
                      <ul class="LaConnexion">
-                        <li class="MenuConnexion"><a class="BoutonConnexion"href="index.php?action=PageLogin">connexion</a></li>
-                        <li class="MenuConnexion"><a class="BoutonConnexion"href="index.php?action=PageInscription">m'incrire</a></li>
+                        <li class="MenuConnexion"><a class="BoutonConnexion" href="index.php?action=PageLogin">connexion</a></li>
+                        <li class="MenuConnexion"><a class="BoutonConnexion" href="index.php?action=PageInscription">m'incrire</a></li>
                     </ul>
                </nav>
         <div id="BanniereMenu"> 
