@@ -88,6 +88,10 @@ if (isset($_GET['action']))
     case'AfficherRecette';
     AfficherRecette();
     break;
+    //filtre recette par alcool
+    case'TrieRecette';
+    TrieRecette();
+  break;
    }
 }
 else

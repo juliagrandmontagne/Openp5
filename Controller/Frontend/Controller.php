@@ -47,7 +47,7 @@ function ProfilUtilisateur()
     $DataUtilisateur = $ICUtilisateur->ProfilUtilisateur();
     //$DataUtilisateurperso = $ICUtilisateur-> Searchbar();
     require('View/Frontend/GestionUtilisateur.php');
-   // require('View/Frontend/Headerbis.php')
+
 }
 function Searchbar()
 { 
@@ -55,7 +55,6 @@ function Searchbar()
     $ICsearch = new EspaceGestion();
     $DataUtilisateurperso = $ICsearch-> Searchbar();
     require('View/Frontend/GestionUtilisateur.php');
-   // require('View/Frontend/Headerbis.php')
 }
 //lance la page gestion administratif (moderateur)
 function ProfilAdministration()
@@ -128,6 +127,12 @@ function deconnection()
    // $Datadeconnection = $ICdeconnection->deconnection();
    // require('View/Frontend/GestionUtilisateur.php');
 }
-
+function TrieRecette()
+{ 
+    require('Model/Frontend/Recette.php');
+    $ICTrieRecette = new Recette();
+    $DataTrieRecette = $ICTrieRecette->TrieRecette();
+    require('View/Frontend/TrieRecette.php');
+}
 
 ?>
