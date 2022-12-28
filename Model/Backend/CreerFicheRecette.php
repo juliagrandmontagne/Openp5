@@ -4,7 +4,7 @@ class modelcreerrecette
   //fonction qui insere les recette dans la base de données
   public function CreeRecette()
   {
-    require('connexion.php');
+    require('Connexion.php');
     $name = $_FILES['file']['name'];
 
     $sth = $bdd->prepare('INSERT INTO recette ( Ingredients, nomrecette, Recette, Images, IDUtilisateur, difficulte, couleur) VALUES(?, ?, ?, ?, ?, ?, ?)');

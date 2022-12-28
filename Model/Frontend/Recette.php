@@ -84,6 +84,15 @@ class Recette
         return $data;
         $rereponseq->cloreCursor();
     }
+    public function RecupereRecetteTousNiveau()
+    {
+        require('Connexion.php');
+        $reponse = $bdd->prepare('SELECT * FROM recette');
+        $reponse->execute();
+        $data = $reponse->fetchAll();
+        return $data;
+        $rereponseq->cloreCursor();
+    }
     public function TrieRecette()
     {
         require('Connexion.php');

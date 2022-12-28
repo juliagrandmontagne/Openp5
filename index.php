@@ -92,6 +92,10 @@ if (isset($_GET['action']))
     case'TrieRecette';
     TrieRecette();
   break;
+  
+  case'RecetteToutNiveau';
+  RecetteToutNiveau();
+break;
    }
 }
 else

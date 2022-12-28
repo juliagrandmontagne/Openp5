@@ -12,6 +12,10 @@
              <a href="index.php?action=PageRecetteDebutant"><img src="Images/Mojito.jpg"  alt="logo de tout-en-canon" id="Logo"></a>
                  <nav>
                      <ul>
+                     <li class="Naviguation">
+                            <a href="index.php?action=RecetteToutNiveau">Tous Niveau
+                            </a>
+                     
                         <li class="Naviguation">
                             <a href="index.php?action=PageRecetteDebutant">Débutant
                                  <i class="fas fa-leaf feuille"></i>

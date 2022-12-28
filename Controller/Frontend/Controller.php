@@ -134,5 +134,13 @@ function TrieRecette()
     $DataTrieRecette = $ICTrieRecette->TrieRecette();
     require('View/Frontend/TrieRecette.php');
 }
+function RecetteToutNiveau()
+{     
+    require('Model/Frontend/Recette.php');
+    $ICRecette = new Recette();
+    $DataRecette = $ICRecette->RecupereRecetteTousNiveau();
+    require('View/Frontend/RecetteTousNiveau.php');
+
+}
 
 ?>
