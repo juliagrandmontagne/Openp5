@@ -1,12 +1,9 @@
 <?php $title = 'comptemoderateur' ; ?>
 <?php ob_start() ; ?>
+<h3 id="Titre">Bienvenu cher Administrateur voilà  la liste complete des utilisateurs ainsi que leurs recettes ainsi que la possibilité de les forcer a quitter la famille des tout-en-canon.</h3>	
 <section id="Admin">
   <div class="GestionAdministratifUilisateur">
-      <div class="Recherche">
-        <label for="SiteSearchProfil"></label>
-        <input type="search" id="SiteSearchProfil" name="q">
-        <button>chercher</button>
-      </div>
+
       <div class="Liste"></div>
         <?php  foreach ($DataAdministrateurutilisateur as $donnees) : ?>
         <div class="ElementRecette">
@@ -19,11 +16,7 @@
         <?php endforeach?>
   </div>
     <div class="GestionAdministratifRecette">
-      <div class="Recherche">
-        <label for="SiteSearch"></label>
-        <input type="search" id="SiteSearch" name="q">
-        <button>chercher</button>
-      </div>
+
       <div class="Liste">
         <?php  foreach ($DataAdministrateur as $donnees) : ?>
         <div class="ElementRecette">

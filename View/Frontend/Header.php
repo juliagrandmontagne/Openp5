@@ -13,7 +13,7 @@
                  <nav>
                      <ul>
                      <li class="Naviguation">
-                            <a href="index.php?action=RecetteToutNiveau">Tous Niveau
+                            <a href="index.php?action=RecetteToutNiveau">Tous Niveaux
                             </a>
                      
                         <li class="Naviguation">

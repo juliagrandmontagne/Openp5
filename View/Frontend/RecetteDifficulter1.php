@@ -1,7 +1,7 @@
 <?php $title = 'recette' ; ?>
 <?php ob_start() ; ?>
   <section id="FiltreAlcool">
-    <aside class="MenuFiltreAlcool">
+  <aside class="MenuFiltreAlcool">
       <nav class="nav" >
         <ul>
           <li><a class="oh" href="index.php?action=TrieRecette&oh=Rhum">Rhum</a></li></br>

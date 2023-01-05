@@ -22,5 +22,6 @@
             <?=$content ?>
             <?php require ('Footer.php'); ?>
         </div>
+        <script src="View/js/gestioncouleurdynamique.js"></script>
     </body>	
 </html> 

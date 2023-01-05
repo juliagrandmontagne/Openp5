@@ -1,8 +1,15 @@
 <?php $title = 'editionrecette' ; ?>
 <?php ob_start() ; ?>
+    <nav class="espaceUtilisateur">
+        <ul class="retourUtilisateur">
+          <li class="MenuConnexion"><a class="BoutonConnexion" href="index.php?action=ProfilUtilisateur&id=<?php echo $_SESSION["id"]?>">Retour</a></li>
+        </ul>
+</nav>
+
 <?php  foreach ($DataAfficherRecette as $donnees) : ?>
+
     <div class="Edition">
-            <form action="index.php?action=ModifierRecette" method="post" id="CreationRecette" >   
+            <form action="index.php?action=ModifierRecette" method="POST" id="CreationRecette" enctype="multipart/form-data">   
                 <label  class="TitreRecette" for="TitreRecette" >Titre de la recette</label>
                     <input  type="text" class="TitreRecette" name="titrerecette" id="TitreRecette" required onchange="changecontenutitre()" value="<?php echo $donnees['nomrecette']?>">
                 <label for="difficulte">cette recette s'adresse à un :</label>
@@ -11,19 +18,23 @@
                     <option value="2">Intermédiaire</option>
                     <option value="3" >Confirmer</option>
                     </select>
+                  
                     <input class="None" name="IDUtilisateur" value="<?php echo $donnees['IDUtilisateur']?>">
                     <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
                 <label class="Recette" for="Recette">Recette</label>
                     <textarea id="Recette" name="Recette" onchange="changecontenurecette()"><?php echo $donnees['Recette']?></textarea>
                 <label class="Ingredients" for="Ingredients">Ingrédients</label>
                     <textarea id="Ingredients" name="Ingredients" onchange="changecontenuingredients()"><?php echo $donnees['Ingredients']?></textarea>
-                <label for="file">Image</label>
+                <?php endforeach; ?>
+                    <label for="file">Image</label>
                     <input type="file" name="file" id="file">
                 <label for="liste">Couleur du fond :</label>
                     <select name="selectCouleur" id="selectCouleur" onchange="changecouleur()">
                     <option value="" >seclectionner votre couleur</option>
                     </select>
-<?php endforeach; ?>
+                    <?php
+                    $var=$donnees['ID'];
+                    ?>
                 <button  type="submit" class="BoutonEnvoyer" name="valider" id="Valider"  onClick="ok()">VALIDER</button>
             </form>
             <?php
@@ -44,6 +55,13 @@ if(isset($_FILES['file'])){
   }
   else{
       echo "Mauvaise extension";
+  }
+    ?>
+                <?php
+                //faire une boucle si imput id vide rien sinon redirection 
+    if (isset($var)) {}
+  else{
+    echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=1');</script>";
   }
     ?>
         </div>

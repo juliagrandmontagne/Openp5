@@ -1,16 +1,15 @@
 <?php $title = 'recette' ; ?>
 <?php ob_start() ; ?>
   <section id="FiltreAlcool">
-    <aside class="MenuFiltreAlcool">
+  <aside class="MenuFiltreAlcool">
       <nav class="nav" >
         <ul>
-          <li><a class="oh" href="#">Rhum</a></li></br>
-          <li><a class="oh" href="#">Vodka</a></li>
-          <li><a class="oh" href="#">Whisky </a></li>
-          <li><a class="oh" href="#">Scotch</a></li>
-          <li><a class="oh" href="#">Tequila</a></li>
-          <li><a class="oh" href="#">Champagne</a></li>
-          <li><a class="oh" href="#">Moktail</a></li>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Rhum">Rhum</a></li></br>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Vodka">Vodka</a></li>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Whisky">Whisky </a></li>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Scotch">Scotch</a></li>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Tequila">Tequila</a></li>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Champagne">Champagne</a></li>
         </ul>
       </nav>
     </aside>

@@ -1,7 +1,17 @@
 <?php $title = 'recette' ; ?>
 <?php ob_start() ; ?>
-  <section id="FiltreAlcool">
-    
+<aside class="MenuFiltreAlcool">
+      <nav class="nav" >
+        <ul>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Rhum">Rhum</a></li></br>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Vodka">Vodka</a></li>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Whisky">Whisky </a></li>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Scotch">Scotch</a></li>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Tequila">Tequila</a></li>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Champagne">Champagne</a></li>
+        </ul>
+      </nav>
+    </aside>
 <section id="Pages"> 
   <?php  foreach ($DataTrieRecette as $donnees) : ?>   
     <article class="EspaceRecettes">
