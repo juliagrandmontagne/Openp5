@@ -8,7 +8,7 @@
         <?php  foreach ($DataAdministrateurutilisateur as $donnees) : ?>
         <div class="ElementRecette">
         <p class="ElementAdmin"><?php echo $donnees['PseudoUtilisateur']?></p>
-        <form action="index.php?action=SupressionProfilAdmin" method="post" class="ListeUtilisateur">
+        <form action="index.php?action=SupressionProfilAdmin" method="POST" class="ListeUtilisateur" enctype="multipart/form-data">
           <input class="None" name="IDUtilisateur" value="<?php echo $donnees['IDUtilisateur']?>">
           <button  type="submit" class="Icone"><i class="fa fa-trash" aria-hidden="true" ></i></button>
         </form> 

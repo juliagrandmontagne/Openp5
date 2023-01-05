@@ -61,7 +61,9 @@ if(isset($_FILES['file'])){
                 //faire une boucle si imput id vide rien sinon redirection 
     if (isset($var)) {}
   else{
-    echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=1');</script>";
+    session_start();
+    $IdBDD = $_SESSION["id"];
+    echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
   }
     ?>
         </div>

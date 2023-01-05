@@ -31,24 +31,22 @@ class EspaceGestionBack
     public function SupressionProfilAdmin()
     {
       require('Connexion.php');
+      $reponse = $bdd->prepare('DELETE FROM recette WHERE IDUtilisateur=?');
+      $reponse->execute(array(htmlspecialchars($_POST['IDUtilisateur'])));
       $reponse = $bdd->prepare('DELETE FROM utilisateur WHERE IDUtilisateur=?');
      $reponse->execute(array(htmlspecialchars($_POST['IDUtilisateur'])));
-      echo "<script type='text/javascript'>document.location.replace('index.php?action=PageAdministration');</script>";
+     echo "<script type='text/javascript'>document.location.replace('index.php?action=PageAdministration');</script>";
     }
+
     public function ModifierRecette() 
     {
       require('Connexion.php');
       $name = $_FILES['file']['name'];
       $reponse = $bdd->prepare('UPDATE recette SET  Ingredients=?, nomrecette=?, Recette=?, Images=?, difficulte=?, couleur=?  WHERE ID=?');
-      $reponse->execute(array( htmlspecialchars($_POST['Ingredients']), htmlspecialchars($_POST['titrerecette']), htmlspecialchars($_POST['Recette']), "Images/$name",htmlspecialchars($_POST['difficulte']), htmlspecialchars($_POST['selectCouleur']),htmlspecialchars($_POST['ID'])));
-      session_start();
-      //$IdBDD = $_SESSION["id"];
-     // echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=1');</script>"; 
+      $reponse->execute(array( htmlspecialchars($_POST['Ingredients']), htmlspecialchars($_POST['titrerecette']), htmlspecialchars($_POST['Recette']), "Images/$name",htmlspecialchars($_POST['difficulte']), htmlspecialchars($_POST['selectCouleur']),htmlspecialchars($_POST['ID']))); 
       return $reponse; 
       $rereponseq->cloreCursor();
       echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=1');</script>";
-      //header('Location:index.php?action=ProfilUtilisateur&id=1');
-      //print("coucou");
     }
     public function AfficherRecette()
     {
