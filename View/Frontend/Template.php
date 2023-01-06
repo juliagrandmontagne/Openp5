@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css"/>
+        <link rel="apple-touch-icon" sizes="57x57" href="Images/apple-icon-57x57.png">
         <script src="https://kit.fontawesome.com/a1efcfbe5e.js" crossorigin="anonymous"></script>
 		<title>Tout-en-canons</title>
 	</head>

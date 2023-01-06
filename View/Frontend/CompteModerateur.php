@@ -1,6 +1,6 @@
 <?php $title = 'comptemoderateur' ; ?>
 <?php ob_start() ; ?>
-<h3 id="Titre">Bienvenu cher Administrateur voilà  la liste complete des utilisateurs ainsi que leurs recettes ainsi que la possibilité de les forcer a quitter la famille des tout-en-canon.</h3>	
+<h3 >Bienvenu cher Administrateur voilà  la liste complete des utilisateurs ainsi que leurs recettes ainsi que la possibilité de les forcer a quitter la famille des tout-en-canon.</h3>	
 <section id="Admin">
   <div class="GestionAdministratifUilisateur">
 

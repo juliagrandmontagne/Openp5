@@ -1,7 +1,8 @@
 <?php $title = 'editionrecette' ; ?>
 <?php ob_start() ; ?>
+
 <?php session_start();?>
-<h3 id="Titre">voici l'endroit ou vous pourrez créer votre recette</h3>
+<h3>voici l'endroit ou vous pourrez créer votre recette</h3>
 <nav class="espaceUtilisateur">
         <ul class="retourUtilisateur">
           <li class="MenuConnexion"><a class="BoutonConnexion" href="index.php?action=ProfilUtilisateur&id=<?php echo $_SESSION["id"]?>">Retour</a></li>

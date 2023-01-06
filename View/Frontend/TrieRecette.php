@@ -3,7 +3,7 @@
 <aside class="MenuFiltreAlcool">
       <nav class="nav" >
         <ul>
-          <li><a class="oh" href="index.php?action=TrieRecette&oh=Rhum">Rhum</a></li></br>
+          <li><a class="oh" href="index.php?action=TrieRecette&oh=Rhum">Rhum</a></li>
           <li><a class="oh" href="index.php?action=TrieRecette&oh=Vodka">Vodka</a></li>
           <li><a class="oh" href="index.php?action=TrieRecette&oh=Whisky">Whisky </a></li>
           <li><a class="oh" href="index.php?action=TrieRecette&oh=Scotch">Scotch</a></li>

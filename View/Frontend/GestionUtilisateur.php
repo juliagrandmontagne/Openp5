@@ -1,6 +1,7 @@
 <?php $title = 'compteutilisateur' ; ?>
 <?php ob_start() ; ?>
-<h1 id="Titre">Bonjour bienvenue sur votre espace personelle</h1>
+<?php session_start(); ?>
+<h1 class="Titre">Bonjour bienvenue sur votre espace personelle</h1>
   <section id="ConteneurPrincipal">
 
   <nav class="EspaceUtilisateur">

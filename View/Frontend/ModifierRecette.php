@@ -1,6 +1,7 @@
 <?php $title = 'editionrecette' ; ?>
+<?php session_start(); ?>
 <?php ob_start() ; ?>
-<h3 id="Titre">voici l'endroit ou vous pourrez Modifier vos recettes</h3>
+<h3 class="Titre">voici l'endroit ou vous pourrez Modifier vos recettes</h3>
     <nav class="espaceUtilisateur">
         <ul class="retourUtilisateur">
           <li class="MenuConnexion"><a class="BoutonConnexion" href="index.php?action=ProfilUtilisateur&id=<?php echo $_SESSION["id"]?>">Retour</a></li>
@@ -14,7 +15,7 @@
                 <label  class="TitreRecette" for="TitreRecette" >Titre de la recette</label>
                     <input  type="text" class="TitreRecette" name="titrerecette" id="TitreRecette" required onchange="changecontenutitre()" value="<?php echo $donnees['nomrecette']?>">
                 <label for="difficulte">cette recette s'adresse à un :</label>
-                    <select name="difficulte"  id="ListeDifficuter">
+                    <select name="difficulte"  id="difficulte">
                     <option selected value="1">Débutant</option>
                     <option value="2">Intermédiaire</option>
                     <option value="3" >Confirmer</option>
@@ -29,7 +30,7 @@
                 <?php endforeach; ?>
                     <label for="file">Image</label>
                     <input type="file" name="file" id="file">
-                <label for="liste">Couleur du fond :</label>
+                <label for="selectCouleur">Couleur du fond :</label>
                     <select name="selectCouleur" id="selectCouleur" onchange="changecouleur()">
                     <option value="" >seclectionner votre couleur</option>
                     </select>
@@ -38,35 +39,40 @@
                     ?>
                 <button  type="submit" class="BoutonEnvoyer" name="valider" id="Valider"  onClick="ok()">VALIDER</button>
             </form>
-            <?php
-if(isset($_FILES['file'])){
-    $tmpName = $_FILES['file']['tmp_name'];
-    $name = $_FILES['file']['name'];
-    $size = $_FILES['file']['size'];
-    $error = $_FILES['file']['error'];
-  }
-  move_uploaded_file($tmpName, './Images/'.$name);
-  $tabExtension = explode('.', $name);
-  $extension = strtolower(end($tabExtension));
-  //$_SESSION['$name'] = $name;
-  //Tableau des extensions que l'on accepte
-  $extensions = ['jpg', 'png', 'jpeg', 'gif'];
-  if(in_array($extension, $extensions)){
-      move_uploaded_file($tmpName, './upload/'.$name);
-  }
-  else{
-  }
-    ?>
+                 <?php
+                    if(isset($_FILES['file']))
+                    {
+                        $tmpName = $_FILES['file']['tmp_name'];
+                        $name = $_FILES['file']['name'];
+                        $size = $_FILES['file']['size'];
+                        $error = $_FILES['file']['error'];
+                    }
+                    move_uploaded_file($tmpName, './Images/'.$name);
+                    $tabExtension = explode('.', $name);
+                    $extension = strtolower(end($tabExtension));
+                    //$_SESSION['$name'] = $name;
+                    //Tableau des extensions que l'on accepte
+                    $extensions = ['jpg', 'png', 'jpeg', 'gif'];
+                    if(in_array($extension, $extensions))
+                    {
+                         move_uploaded_file($tmpName, './upload/'.$name);
+                        }
+                    else
+                    {}
+                 ?>
+                        
                 <?php
-                //faire une boucle si imput id vide rien sinon redirection 
-    if (isset($var)) {}
-  else{
-    session_start();
-    $IdBDD = $_SESSION["id"];
-    echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
-  }
-    ?>
-        </div>
+                    //faire une boucle si imput id vide rien sinon redirection 
+                    if (isset($var)) 
+                    {}
+                    else
+                    {
+                    session_start();
+                    $IdBDD = $_SESSION["id"];
+                    echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
+                    }
+                ?>
+    </div>
     <section id="laEditionRecette">
         <div id="RecettePrevous">   
             <div class="TitRecette" id="PreviousTitRecette" >Titre de la recette</div>
@@ -75,7 +81,7 @@ if(isset($_FILES['file'])){
         </div>
     
     </section>  
-    </div> 
+    
           
 <?php $content = ob_get_clean() ; ?>
 <?php require('Templatebis.php'); ?>

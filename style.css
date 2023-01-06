@@ -34,9 +34,14 @@ ul
 {
 list-style:none;
 }
+h3 
+{
+  padding: 30px;
+display: grid;
+justify-items: center;
+}
 div#Contenaire 
 {
-
 margin: auto;
 }
 /*MENU NAVIGUATION PRINCIPAL */
@@ -68,7 +73,7 @@ margin: auto;
 {
 color: green;
 }
-h1#Titre 
+h1
 {
 text-align: center;
 }
@@ -163,8 +168,7 @@ margin-top: 80px;
   padding: 20px;
   position: absolute;
   top: 800px;
-  /* margin: auto; */
-  /* margin-top: -50%; */
+  width: 80%;
 }
 /*pagesrecettes*/
 div#Recette1 
@@ -231,7 +235,8 @@ img.IllustrationCoktail
 display: flex;
 width: 300px;
 margin-top: 10px;
-max-height: 300px;
+max-height: 280px;
+
 }
 select#ListeDifficuter {
   display: block;
@@ -360,12 +365,7 @@ color: #ffffff;
 width: 100%;
 
 }
-h3#Titre {
-  width: 100%;
-  /* margin: auto; */
-  display: grid;
-  justify-items: center;
-}
+
 form#ConnexionUtilisateur {
   display: grid;
   justify-content: center;
@@ -486,15 +486,15 @@ text-decoration: none;
 width: 100%;
 }
 /*editionrecette*/
-#RecettePrevous 
-{
-  width: 97%;
-height: 742px;
-border-width: 1px;
-border-style: solid;
-border-color: black;
-border-radius: 30px;
-padding: 20px;
+#RecettePrevous {
+  width: 95%;
+  height: 742px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 10PX;
 }
 .retourUtilisateur
 {
@@ -502,7 +502,7 @@ padding: 20px;
 }
 .Edition 
 {
-  width: 97%;
+width: 95%;
 height: 700px;
 border-width: 1px;
 border-style: solid;
@@ -512,6 +512,7 @@ padding: 20px;
 margin-top: 150px;
 display: grid;
 justify-content: center;
+margin: 10PX;
 }
 section#EditionRecette 
 {
@@ -588,6 +589,10 @@ font-family: Quintessential-Regular;
 display: block;
 margin: auto;
 }
+#responsive
+{
+  display:none;
+  }
 .ListeUtilisateur 
 {
   margin-top: 10px;
@@ -777,6 +782,7 @@ top: 40px;
   {
     margin-top: -180px;
     font-size: 13px;
+    width: 79%;
   }
   ul.Laconnexion 
   {
@@ -789,10 +795,18 @@ top: 40px;
 }
 @media screen and (min-width: 1300px)
 {
-  div#Contenaire {
+  div#Contenaire 
+  {
     max-width: 1300px;
     margin: auto;
   }
+  .Speetch {
+    /* margin-top: -380px; */
+    font-size: 13px;
+    width: 79%;
+    position: absolute;
+    top: 500px;
+}
 }
 @media screen and (max-width: 740px)
 {
@@ -822,6 +836,12 @@ top: 40px;
 }
 @media screen and (max-width: 556px)
 {
+  #responsive
+{
+  display:block;
+width: 100%;
+height: 300px;
+  }
   .ClassementRecette {
     margin-top: -20px;
     display: flex;
@@ -844,6 +864,7 @@ top: 40px;
     height: 180px;
     width: 100%;
     justify-content: center;
+    
   }
   .Edition 
   {
@@ -909,5 +930,14 @@ form.ListeUtilisateur {
   width: 100%;
   display: grid;
   justify-content: center;
+}
+.Speetch {
+  /* margin-top: -380px; */
+  font-size: 13px;
+  width: 79%;
+  position: absolute;
+  /* top: 400px; */
+  margin-left: -20px;
+}
 }
 }
