@@ -41,7 +41,7 @@ class EspaceGestion
     public function ProfilAdministrateurutilisateur()
     {
       require('Connexion.php');
-      $reponse = $bdd->prepare('SELECT * FROM utilisateur');
+      $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE Administrateur=0');
       $reponse->execute();
       return $reponse;
       $rereponseq->cloreCursor();

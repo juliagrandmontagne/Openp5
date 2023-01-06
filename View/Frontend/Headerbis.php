@@ -9,7 +9,7 @@
             <div id="Barre">
                 <a href="index.php?action=PageRecetteDebutant"><img src="Images/Mojito.jpg"  alt="logo de OH-lique" id="Logo"></a>
             </div> 
-            <h1 id="Titre">Bonjour bienvenue sur votre espace personelle</h1>	  
+	  
         </div>   	
     </section>					
 </header>

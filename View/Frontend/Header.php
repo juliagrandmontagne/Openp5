@@ -9,7 +9,7 @@
         <div id="BanniereMenu"> 
             <h1 id="Titre">bienvenue chez les Tout-en-canons</h1>		
             <div id="Barre">
-             <a href="index.php?action=PageRecetteDebutant"><img src="Images/Mojito.jpg"  alt="logo de tout-en-canon" id="Logo"></a>
+             <a href="index.php?action=PageAccueil"><img src="Images/Mojito.jpg"  alt="logo de tout-en-canon" id="Logo"></a>
                  <nav>
                      <ul>
                      <li class="Naviguation">

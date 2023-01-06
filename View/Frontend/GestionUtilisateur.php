@@ -1,5 +1,6 @@
 <?php $title = 'compteutilisateur' ; ?>
 <?php ob_start() ; ?>
+<h1 id="Titre">Bonjour bienvenue sur votre espace personelle</h1>
   <section id="ConteneurPrincipal">
 
   <nav class="EspaceUtilisateur">
@@ -8,14 +9,6 @@
                     </ul>
             </nav>
     <div class="CarreGestionRecette">
-      <div class="Recherche">
-        <form action="index.php?action=Searchbar" method="GET">
-          <label for="SiteSearch"></label>
-          <input type="Search" id="SiteSearch" name="q" placeholder="recherche">
-          <input class="None" name="ID" value="<?php echo $donnees['ID']?>">
-          <button type="submit" name="chercher" class="BoutonEnvoyersarch">rechercher</button>
-        </form>  
-      </div>
         <div class="Liste">
           <?php  foreach ($DataUtilisateur as $donnees) : ?>
             <div class="ElementRecette">

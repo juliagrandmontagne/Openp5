@@ -102,7 +102,7 @@ a.BoutonConnexion {
   font-family: Quintessential-Regular;
   font-size: 1.3em;
   width: 99px;
-  margin: auto;
+ 
   justify-content: center;
 align-content: center;
 display: grid;
@@ -118,6 +118,11 @@ text-decoration: none;
 font-family: Quintessential-Regular;
 font-size: 1.3em;
 
+}
+p.ElementAdmin {
+  width: 30%;
+  /* margin: auto; */
+  margin-left: 150px;
 }
 .BoutonEnvoyersarch {
   width: 90px;
@@ -149,16 +154,17 @@ display: flex;
 width: 100%;
 margin-top: 80px;
 }
-.Speetch 
-{
-display: inline-block;
-color: #ffffff;
-background-color: rgba(0, 0, 5, 0.5);
-font-family: "Merienda-Regular";
-text-align: center;
-margin: auto;
-margin-top: -500px;
-
+.Speetch {
+  display: grid;
+  color: #ffffff;
+  background-color: rgba(0, 0, 5, 0.5);
+  font-family: "Merienda-Regular";
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 800px;
+  /* margin: auto; */
+  /* margin-top: -50%; */
 }
 /*pagesrecettes*/
 div#Recette1 
@@ -224,6 +230,12 @@ img.IllustrationCoktail
 {
 display: flex;
 width: 300px;
+margin-top: 10px;
+max-height: 300px;
+}
+select#ListeDifficuter {
+  display: block;
+  margin: auto;
 }
 .EspaceRecettes 
 {
@@ -350,6 +362,9 @@ width: 100%;
 }
 h3#Titre {
   width: 100%;
+  /* margin: auto; */
+  display: grid;
+  justify-items: center;
 }
 form#ConnexionUtilisateur {
   display: grid;
@@ -516,6 +531,7 @@ display: flex;
 flex-wrap: wrap;
 height: 20px;
 margin-left:40px;
+  margin-top: 10px;
 }
 .Recherche
 {
@@ -523,19 +539,19 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-evenly;
 }
-.ElementRecette
-{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
-border-bottom-style: solid;
-border-bottom-width: 1px;
-border-bottom-color: gray;
+
+.ElementRecette {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: gray;
 }
-.ClassementRecette 
-{
-margin-top: 20px;
-font-family: "Merienda-Regular";
+.ClassementRecette {
+  width: 20%;
+  display:block;
+  margin-top: 25px;
 }
 /**/
 #CreationRecette 
@@ -560,10 +576,12 @@ display: grid;
 justify-items: center;
 font-family: Quintessential-Regular;
 }
-.TitreRecetteUtilisateur 
-{
-display: grid;
-justify-items: left;
+.TitreRecetteUtilisateur {
+  display: grid;
+  /* justify-items: left; */
+  max-width: 300px;
+  width: 40%;
+  justify-content: center;
 }
 #Valider 
 {
@@ -572,6 +590,7 @@ margin: auto;
 }
 .ListeUtilisateur 
 {
+  margin-top: 10px;
 justify-items: right;
 display: grid;
 margin-left: 40px;
@@ -805,12 +824,15 @@ top: 40px;
 {
   .ClassementRecette {
     margin-top: -20px;
-
-    display: block;
+    display: flex;
+    width: auto;
+    margin: auto;
+    margin-top: -20px;
   }
   .TitreRecetteUtilisateur {
     display: inline-grid;
-
+    width: 100%;
+    max-height: 70px;
   }
   .ElementRecette {
     display: inline-grid;
@@ -861,7 +883,31 @@ top: 40px;
   .IconeActionRecette {
     display: flex;
     flex-wrap: wrap;
-    height: 20px;
-    margin-left: -40px;
+    height: 40px;
+    width: 100%;
+    margin: 0px;
+    margin-right: 50px;
   }
+  p.ElementAdmin {
+    width: 100%;
+    /* margin: auto; */
+    margin-left: 0px;
+  }
+  .ListeUtilisateur {
+    justify-items: right;
+    display: grid;
+    margin-left: 0px;
+    margin-right: 30px;
+  }
+  .GestionAdministratifRecette {
+    margin: auto;
+    margin-top: 0px;
+    width: 90%;
+    margin-top: 10px;
+}
+form.ListeUtilisateur {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
 }

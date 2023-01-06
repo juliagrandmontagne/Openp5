@@ -21,7 +21,7 @@
         <h2><?php echo $donnees['nomrecette']?></h2>  
       </div>     
       <div class="Recette">
-        <?php echo $donnees['Recette']?> <br>
+        <?php echo $donnees['Ingredients']?> <br>
         <img src="<?php echo $donnees['Images']?>" alt="IllustrationCoktail" class="IllustrationCoktail"> 
       </div>
       <?php $identite=$donnees['ID']?>
