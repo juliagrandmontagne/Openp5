@@ -801,11 +801,12 @@ top: 40px;
     margin: auto;
   }
   .Speetch {
-    /* margin-top: -380px; */
+
     font-size: 13px;
-    width: 79%;
+    width: 1170px;
     position: absolute;
-    top: 500px;
+    display: flex;
+    justify-content: center;
 }
 }
 @media screen and (max-width: 740px)
