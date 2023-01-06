@@ -844,11 +844,10 @@ width: 100%;
 height: 300px;
   }
   .ClassementRecette {
-    margin-top: -20px;
     display: flex;
     width: auto;
     margin: auto;
-    margin-top: -20px;
+    margin-top: -60px;
   }
   .TitreRecetteUtilisateur {
     display: inline-grid;
@@ -862,10 +861,9 @@ height: 300px;
     border-bottom-width: 1px;
     border-bottom-color: gray;
     margin: auto;
-    height: 180px;
+    height: 280px;
     width: 100%;
     justify-content: center;
-    
   }
   .Edition 
   {
@@ -880,7 +878,7 @@ height: 300px;
   .elementRecette 
   {
   display: flex;
-  height: 140px;
+  height: 300px;
   }
   .ListeUtilisateur 
   {
@@ -909,6 +907,7 @@ height: 300px;
     width: 100%;
     margin: 0px;
     margin-right: 50px;
+    margin-top: -60px;
   }
   p.ElementAdmin {
     width: 100%;
@@ -940,5 +939,14 @@ form.ListeUtilisateur {
   /* top: 400px; */
   margin-left: -20px;
 }
+img.IllustrationCoktail {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  max-height: 280px;
+}
+.TitreRecette {
+  width: 95%;
+  margin: auto;
 }
 }
