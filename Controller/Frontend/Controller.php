@@ -8,7 +8,7 @@ function PageAccueil()
 //charge la page recette debutant
 function PageRecetteDebutant()
 { 
-    require('Model/Frontend/Recette.php');
+    require('Manager/Frontend/Recette.php');
     $ICRecetteDebutant = new Recette();
     $DataRecetteDeb = $ICRecetteDebutant->RecupereRecetteDebutant();
     require('View/Frontend/RecetteDifficulter1.php');
@@ -16,7 +16,7 @@ function PageRecetteDebutant()
 //charge la page recette intermediaire
 function PageRecetteIntermediaire()
 { 
-    require('Model/Frontend/Recette.php');
+    require('Manager/Frontend/Recette.php');
     $ICRecetteIntermediaire = new Recette();
     $DataRecetteInt = $ICRecetteIntermediaire->RecupereRecetteIntermediaire();
     require('View/Frontend/RecetteDifficulter2.php');
@@ -24,7 +24,7 @@ function PageRecetteIntermediaire()
 //charge la page recette confirmer
 function PageRecetteConfirmer()
 { 
-    require('Model/Frontend/Recette.php');
+    require('Manager/Frontend/Recette.php');
     $ICRecetteConfirmer = new Recette();
     $DataRecetteConf = $ICRecetteConfirmer->RecupereRecetteConfirmer();
     require('View/Frontend/RecetteDifficulter3.php');
@@ -42,7 +42,7 @@ function PageLogin()
 //lance la page gestion utilisateur
 function ProfilUtilisateur()
 { 
-    require('Model/Frontend/EspaceGestion.php'); 
+    require('Manager/Frontend/EspaceGestion.php'); 
     $ICUtilisateur = new EspaceGestion();
     $DataUtilisateur = $ICUtilisateur->ProfilUtilisateur();
     //$DataUtilisateurperso = $ICUtilisateur-> Searchbar();
@@ -51,7 +51,7 @@ function ProfilUtilisateur()
 }
 function Searchbar()
 { 
-    require('Model/Frontend/EspaceGestion.php'); 
+    require('Manager/Frontend/EspaceGestion.php'); 
     $ICsearch = new EspaceGestion();
     $DataUtilisateurperso = $ICsearch-> Searchbar();
     require('View/Frontend/GestionUtilisateur.php');
@@ -59,7 +59,7 @@ function Searchbar()
 //lance la page gestion administratif (moderateur)
 function ProfilAdministration()
 { 
-    require('Model/Frontend/EspaceGestion.php'); 
+    require('Manager/Frontend/EspaceGestion.php'); 
     $ICAdministrateur = new EspaceGestion();
     $DataAdministrateur= $ICAdministrateur->ProfilAdministrateur();
     $DataAdministrateurutilisateur= $ICAdministrateur->ProfilAdministrateurutilisateur();
@@ -68,7 +68,7 @@ function ProfilAdministration()
 //charge la page du recette (sera incrementer methode get pour recuperer la recette intdividuelle)
 function PageRecette()
 { 
-    require('Model/Frontend/Recette.php');    
+    require('Manager/Frontend/Recette.php');    
     $ICPagerecette = new Recette();
     $DataPagerecette= $ICPagerecette->RecupereRecette ();
     require('View/Frontend/PageRecette.php');
@@ -80,15 +80,15 @@ function pageCreationEdition()
 }
 function Creationrecette()
 { 
-    require('Model/Backend/CreerFicheRecette.php');
-    $ICCreationRecette = new modelcreerrecette();
+    require('Manager/Backend/CreerFicheRecette.php');
+    $ICCreationRecette = new Managercreerrecette();
     $DataCreeRecette = $ICCreationRecette->CreeRecette();
     require('View/Frontend/EditionRecette.php');
 }
 function EditionRecette()
 { 
-    require('Model/Backend/CreerFicheRecette.php');
-    $ICCreationRecette = new modelcreerrecette();
+    require('Manager/Backend/CreerFicheRecette.php');
+    $ICCreationRecette = new Managercreerrecette();
     $DataCreeRecette = $ICCreationRecette->CreeRecette();
     require('View/Frontend/EditionRecette.php');
 }
@@ -100,47 +100,46 @@ function pageContact()
 //lance la fonction qui créé un utilisateur
 function CreerUtilisateur()
 { 
-    require('Model/Backend/CreationUtilisateur.php'); 
-    $ICCreationUtilisateur = new modelcreerutilisateur();
+    require('Manager/Backend/CreationUtilisateur.php'); 
+    $ICCreationUtilisateur = new Managercreerutilisateur();
     $DataCreeUtilisateur = $ICCreationUtilisateur->CreeUtilisateur();
     require('View/Frontend/Inscription.php');
 }
 //lance la fonction qui redirige la presone sur sont compte (utilisateur ou administrateur)
 function SignIn()
 { 
-    require('Model/Frontend/EspaceGestion.php'); 
+    require('Manager/Frontend/EspaceGestion.php'); 
     $ICConnecter = new EspaceGestion();
     $DataConnecter = $ICConnecter->SignIn();
     require('View/Frontend/ConnexionUtilisateur.php');
 }
 function boutonretour()
 { 
-    require('Model/Frontend/Retour.php'); 
+    require('Manager/Frontend/Retour.php'); 
     $ICRetour = new Retour();
     $DataRetour = $ICRetour->BoutonRetour();
     require('View/Frontend/GestionUtilisateur.php');
 }
 function deconnection()
 { 
-    require('Model/Frontend/Retour.php'); 
+    require('Manager/Frontend/Retour.php'); 
    // $ICdeconnection = new Retour();
    // $Datadeconnection = $ICdeconnection->deconnection();
    // require('View/Frontend/GestionUtilisateur.php');
 }
 function TrieRecette()
 { 
-    require('Model/Frontend/Recette.php');
+    require('Manager/Frontend/Recette.php');
     $ICTrieRecette = new Recette();
     $DataTrieRecette = $ICTrieRecette->TrieRecette();
     require('View/Frontend/TrieRecette.php');
 }
 function RecetteToutNiveau()
 {     
-    require('Model/Frontend/Recette.php');
+    require('Manager/Frontend/Recette.php');
     $ICRecette = new Recette();
     $DataRecette = $ICRecette->RecupereRecetteTousNiveau();
     require('View/Frontend/RecetteTousNiveau.php');
-
 }
 
 ?>

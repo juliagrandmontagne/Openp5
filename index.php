@@ -52,7 +52,7 @@ if (isset($_GET['action']))
     case'PageContact':
     PageContact();
     break;
-    //lance la fonction qui créé un uilisateur
+    //lance la fonction qui créé une recette
     case'Creationrecette';
     EditionRecette();
     break;
@@ -60,7 +60,7 @@ if (isset($_GET['action']))
     case'SupressionRecette';
     SupressionRecette();
     break;
-    //
+    //bouton retour avec effacement de session
     case'boutonretour';
     boutonretour();
     break;
@@ -91,11 +91,21 @@ if (isset($_GET['action']))
     //filtre recette par alcool
     case'TrieRecette';
     TrieRecette();
-  break;
-  
-  case'RecetteToutNiveau';
-  RecetteToutNiveau();
-break;
+    break;
+    //page ensemble des recettes
+    case'RecetteToutNiveau';
+    RecetteToutNiveau();
+    break;
+    //boutonesapceperso
+    case'EspacePerso';
+    EspacePerso();
+    break;
+    case'PageInscriptionAdmin';
+    PageInscriptionAdmin();
+    break;
+    case'CreerAdministrateur';
+    CreerAdministrateur();
+    break;
    }
 }
 else

@@ -1,14 +1,13 @@
 <?php $title = 'compteutilisateur' ; ?>
 <?php ob_start() ; ?>
 <?php session_start(); ?>
-<h1 class="Titre">Bonjour bienvenue sur votre espace personelle</h1>
+<h1 class="Titre">Bonjour bienvenue sur votre espace personel</h1>
   <section id="ConteneurPrincipal">
-
   <nav class="EspaceUtilisateur">
-                     <ul class="Ajout">
-                        <li class="MenuConnexion"><a class="Bouton" href="index.php?action=PageCreationEdition&id=<?php echo $_SESSION["id"]?>">ajouter une recette</a></li>
-                    </ul>
-            </nav>
+      <ul class="Ajout">
+        <li class="MenuConnexion"><a class="Bouton" href="index.php?action=PageCreationEdition&id=<?php echo $_SESSION["id"]?>">ajouter une recette</a></li>
+      </ul>
+  </nav>
     <div class="CarreGestionRecette">
         <div class="Liste">
           <?php  foreach ($DataUtilisateur as $donnees) : ?>

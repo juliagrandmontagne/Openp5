@@ -2,15 +2,15 @@
 <?php ob_start() ; ?>
 <section id="main">
     <div class="Carré">
-        <p class="titreconnection">Bonjour, vous souhaitez vous connecter pour gerer vos recettes ?</p>
+        <p class="titreconnection">Bonjour, vous souhaitez vous connecter pour gérer vos recettes ?</p>
         
             <form action="index.php?action=SignIn" method="post" id="connexionutilisateur" >  
-                <div id="formulairedeconnection"></div>
-                    <input id="ChampNomUtilisateur" name="nameuser" placeholder="pseudo">
-                    <input id="MotDePasse" type="password" name="mp" placeholder="mot de passe">
+                     <div id="formulairedeconnection"></div>
+                <input id="ChampNomUtilisateur" name="nameuser" placeholder="pseudo">
+                <input id="MotDePasse" type="password" name="mp" placeholder="mot de passe">
                 <button  type="submit" class="BoutonEnvoyer" name="valider">Envoyer</button>  
-                    <p>mot de passe oublier?</p>
-                    <p>vous n'etes pas inscrit?</p>           
+                    <p>mot de passe oublié?</p>
+                    <p>vous n'êtes pas inscrit?</p>           
             </form>    
     </div>
     <?php foreach ($DataConnecter as $data) :
@@ -23,20 +23,21 @@
         {
                 if($data['Administrateur'] == 0)
                 {
-                session_start();
-                $_SESSION["connecter"] = "1";
-                $_SESSION["id"] = $IdBDD;
-                echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
+                    session_start();
+                    $_SESSION["connecter"] = "1";
+                    $_SESSION["id"] = $IdBDD;
+                    echo "<script type='text/javascript'>document.location.replace('index.php?action=ProfilUtilisateur&id=$IdBDD');</script>";
                 }
                 elseif($data['Administrateur'] == 1)
                 {
-                session_start();
-                $_SESSION["connecter"] = "1";
-                echo "<script type='text/javascript'>document.location.replace('index.php?action=PageAdministration');</script>";
+                    session_start();
+                    $_SESSION["connecter"] = "1";
+                    echo "<script type='text/javascript'>document.location.replace('index.php?action=PageAdministration');</script>";
                 }
             else
             {
-            echo"erreur dans base de donné";
+                echo "<script type='text/javascript'>document.location.replace('index.php?action=PageAdministration');</script>";
+                echo"erreur dans base de donné";
             }
         }
     endforeach; ?>

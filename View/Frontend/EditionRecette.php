@@ -2,7 +2,7 @@
 <?php ob_start() ; ?>
 
 <?php session_start();?>
-<h3>voici l'endroit ou vous pourrez créer votre recette</h3>
+<h3>voici l'endroit où vous pourrez créer votre recette</h3>
 <nav class="espaceUtilisateur">
         <ul class="retourUtilisateur">
           <li class="MenuConnexion"><a class="BoutonConnexion" href="index.php?action=ProfilUtilisateur&id=<?php echo $_SESSION["id"]?>">Retour</a></li>
@@ -29,28 +29,28 @@
 
              <label for="selectCouleur">Couleur du fond :</label>
                 <select name="selectCouleur" id="selectCouleur" onchange="changecouleur()">
-                <option value="" >seclectionner votre couleur</option>
+                <option value="" >séléctionner votre couleur</option>
                 </select>
             <button  type="submit" class="BoutonEnvoyer" name="valider" id="Valider"  onClick="ok()">VALIDER</button>
         </form>
-        <?php
-if(isset($_FILES['file'])){
-  $tmpName = $_FILES['file']['tmp_name'];
-  $name = $_FILES['file']['name'];
-  $size = $_FILES['file']['size'];
-  $error = $_FILES['file']['error'];
-}
-move_uploaded_file($tmpName, './Images/'.$name);
-$tabExtension = explode('.', $name);
-$extension = strtolower(end($tabExtension));
-$extensions = ['jpg', 'png', 'jpeg', 'gif'];
-if(in_array($extension, $extensions)){
-    move_uploaded_file($tmpName, './Images/'.$name);
-}
-else{
+            <?php
+                if(isset($_FILES['file'])){
+                $tmpName = $_FILES['file']['tmp_name'];
+                $name = $_FILES['file']['name'];
+                $size = $_FILES['file']['size'];
+                $error = $_FILES['file']['error'];
+                }
+                move_uploaded_file($tmpName, './Images/'.$name);
+                $tabExtension = explode('.', $name);
+                $extension = strtolower(end($tabExtension));
+                $extensions = ['jpg', 'png', 'jpeg', 'gif'];
+                if(in_array($extension, $extensions)){
+                    move_uploaded_file($tmpName, './Images/'.$name);
+                }
+                else{
 
-}
-?>
+                }
+            ?>
 </div>
 <section id="laEditionRecette">
     <div id="RecettePrevous">   

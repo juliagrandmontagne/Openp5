@@ -1,6 +1,6 @@
 <?php $title = 'recette' ; ?>
 <?php ob_start() ; ?>
-  <section id="FiltreAlcool">
+<section id="FiltreAlcool">
   <aside class="MenuFiltreAlcool">
       <nav class="nav" >
         <ul>

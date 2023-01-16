@@ -8,8 +8,6 @@
                     <div class="LesIngrédients"><?php echo $donnees['Ingredients']?></div>
                     <div class="LaRecette"><?php echo $donnees['Recette']?></div>
                     <div class="PhotoRecette"><img src="<?php echo $donnees['Images']?>" class="PhotoDeLaRecette" alt="photo de la recette"></div>
-            
-
                 <?php endforeach; ?>
             </div>
     </section>   

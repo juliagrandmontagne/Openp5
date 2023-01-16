@@ -41,15 +41,12 @@ function EspacePerso()
     $DataEspaceperso = $ICEspaceperso->Espaceperso();
     require('View/Frontend/ModifierRecette.php');
 }
-function PageInscriptionAdmin()
-{ 
-    require('View/Frontend/PageInscriptionAdmin.php');
-}
-function CreerAdministrateur()
-{ 
-    require('Manager/Backend/EspaceGestionBack.php'); 
-    $ICCreerAdmin= new EspaceGestionBack();
-    $DataCreerAdmin = $ICCreerAdmin->CreerAdministrateur();
-    require('View/Frontend/PageInscriptionAdmin.php');
-}
+//function PageCreerAdmin()
+//{ 
+ //   require('View/Frontend/PageCreationAdministrateur.php');
+//}
+//function CreerAdministrateur()
+//{ 
+//    require('View/Frontend/PageCreationAdministrateur.php');
+//}
 ?>
